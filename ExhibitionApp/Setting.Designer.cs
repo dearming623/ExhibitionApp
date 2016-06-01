@@ -43,11 +43,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_change_pwd = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -213,24 +216,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(476, 181);
             this.dataGridView1.TabIndex = 14;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 230);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 12);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "链接设置:";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(478, 417);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "增加条目";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "按钮名称";
@@ -249,11 +234,60 @@
             this.Column3.Text = "";
             this.Column3.Width = 80;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 230);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 12);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "链接设置:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(478, 417);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "增加条目";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btn_change_pwd
+            // 
+            this.btn_change_pwd.Location = new System.Drawing.Point(76, 481);
+            this.btn_change_pwd.Name = "btn_change_pwd";
+            this.btn_change_pwd.Size = new System.Drawing.Size(75, 23);
+            this.btn_change_pwd.TabIndex = 17;
+            this.btn_change_pwd.Text = "修改密码";
+            this.btn_change_pwd.UseVisualStyleBackColor = true;
+            this.btn_change_pwd.Click += new System.EventHandler(this.btn_change_pwd_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 464);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 12);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "安全设置:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(74, 463);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(197, 12);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "为了您的程序安全, 请定期修改密码";
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 466);
+            this.ClientSize = new System.Drawing.Size(565, 531);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btn_change_pwd);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
@@ -304,5 +338,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
+        private System.Windows.Forms.Button btn_change_pwd;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
