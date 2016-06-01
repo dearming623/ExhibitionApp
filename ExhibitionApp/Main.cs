@@ -1,0 +1,209 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace ExhibitionApp
+{
+    public partial class Main : Form
+    {
+        public Main()
+        {
+            InitializeComponent();
+        }
+
+
+        private int current_option = -1;
+        private FormMenu menu =  null;
+
+        private FormBrowser _FormBrowser = null;
+        private FormPlayPicture _FormPlayPicture = null;
+        private FormPlayVideo _FormPlayVideo = null;
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //OpenMenuView();
+
+            //CloseMenuView();
+
+
+            OpenPlayPicView();
+            current_option = FormMenu.OPTION_PLAY_PIC;
+        }
+
+        private void OpenMenuView()
+        {
+            if (menu != null)
+            {
+                menu.Activate();
+            }
+            else
+            {
+                menu = new FormMenu();
+                menu.FormClosed += Menu_FormClosed ;
+                menu.onOptionClickEvent += Menu_onOptionClickEvent;
+                menu.Show();
+            }
+        }
+
+        private  void CloseCurrentView(int option)
+        {
+            if (option >= 0)
+            {
+                switch (option)
+                {
+                    case FormMenu.OPTION_PLAY_PIC:
+                        ClosePlayPicView();
+                        break;
+                    case FormMenu.OPTION_PLAY_VIDEO:
+                        ClosePlayVideoView();
+                        break;
+                    case FormMenu.OPTION_BROWSER:
+                        CloseBrowser();
+                        break;
+                    case FormMenu.OPTION_SETTING:
+                        //OpenSetting();
+                        break;
+                }
+            }
+        }
+
+        private void Menu_onOptionClickEvent(int option)
+        {
+            CloseMenuView();
+
+            current_option = option;
+
+            CloseCurrentView(current_option);
+
+            switch (option)
+            {
+                case FormMenu.OPTION_PLAY_PIC:
+                    OpenPlayPicView();
+                    break;
+                case FormMenu.OPTION_PLAY_VIDEO:
+                    OpenPlayVideoView();
+                    break;
+                case FormMenu.OPTION_BROWSER:
+                    OpenBrowser();
+                    break;
+                case FormMenu.OPTION_SETTING:
+                    //OpenSetting();
+                    break;
+
+                default:
+
+                    break;
+            }
+        }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menu = null;
+        }
+
+        private void CloseMenuView()
+        {
+            if (menu != null)
+            {
+                 menu.Close();
+                //menu.Hide();
+            }
+        }
+
+        private void OpenPlayPicView()
+        {
+            if (_FormPlayPicture != null)
+            {
+                _FormPlayPicture.Activate();
+            }
+            else
+            {
+                _FormPlayPicture = new FormPlayPicture();
+                _FormPlayPicture.FormClosed += Form_FormPlayPicture_Closed;
+                _FormPlayPicture.onScreenClickEvent += Func_Screen_Clicked;
+                _FormPlayPicture.Show();
+            }
+
+        }
+
+        private void ClosePlayPicView()
+        {
+            if (_FormPlayPicture != null)
+            {
+                _FormPlayPicture.Close();
+            }
+        }
+
+        private void Form_FormPlayPicture_Closed(object sender, FormClosedEventArgs e)
+        {
+            _FormPlayPicture = null;
+        }
+
+
+        private void OpenBrowser()
+        {
+            if (_FormBrowser != null)
+            {
+                _FormBrowser.Activate();
+            }
+            else
+            {
+                _FormBrowser = new FormBrowser();
+                _FormBrowser.FormClosed += Form_FormBrowser_Closed;
+                _FormBrowser.onScreenClickEvent += Func_Screen_Clicked;
+                _FormBrowser.Show();
+            }
+        }
+
+        private void CloseBrowser()
+        {
+            if (_FormBrowser != null)
+            {
+                _FormBrowser.Close();
+            }
+        }
+       
+        private void Form_FormBrowser_Closed(object sender, FormClosedEventArgs e)
+        {
+            _FormBrowser = null;
+        }
+
+        private void OpenPlayVideoView()
+        {
+            if (_FormPlayVideo != null)
+            {
+                _FormPlayVideo.Activate();
+            }
+            else
+            {
+                _FormPlayVideo = new FormPlayVideo();
+                _FormPlayVideo.FormClosed += Form_FormPlayVideo_Closed;
+                _FormPlayVideo.onScreenClickEvent += Func_Screen_Clicked;
+                _FormPlayVideo.Show();
+            }
+        }
+
+        private void ClosePlayVideoView()
+        {
+            if (_FormPlayVideo != null)
+            {
+                _FormPlayVideo.Close();
+            }
+        }
+
+        private void Form_FormPlayVideo_Closed(object sender, FormClosedEventArgs e)
+        {
+            _FormPlayVideo = null;
+        }
+
+        private void Func_Screen_Clicked(object sender, EventArgs e)
+        {
+            OpenMenuView();
+        }
+
+    }
+}
