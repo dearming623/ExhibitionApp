@@ -12,9 +12,13 @@ namespace ExhibitionApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Main());
+
+
+            MainView Main = new MainView(); 
+            Application.Run();
         }
     }
 }

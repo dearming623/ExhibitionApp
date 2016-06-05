@@ -1,42 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace ExhibitionApp
 {
-    public partial class Main : Form
+    class MainView
     {
-        public Main()
-        {
-            InitializeComponent();
-        }
-
-
         private int current_option = -1;
-        private FormMenu menu =  null;
+        private FormMenu menu = null;
 
         private FormBrowser _FormBrowser = null;
         private FormPlayPicture _FormPlayPicture = null;
         // private FormPlayVideo _FormPlayVideo = null;
         private FormVideoSelection _FormPlayVideo = null;
 
-        private void Main_Load(object sender, EventArgs e)
+        private System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+
+        public  MainView()
         {
             //OpenMenuView();
 
             //CloseMenuView();
 
-
             OpenPlayPicView();
+
             current_option = FormMenu.OPTION_PLAY_PIC;
 
             MyAppSetting.GetInstance().Load();
 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             timer1.Enabled = true;
+   
         }
 
         private void OpenMenuView()
@@ -48,13 +46,13 @@ namespace ExhibitionApp
             else
             {
                 menu = new FormMenu();
-                menu.FormClosed += Menu_FormClosed ;
+                menu.FormClosed += Menu_FormClosed;
                 menu.onOptionClickEvent += Menu_onOptionClickEvent;
                 menu.Show();
             }
         }
 
-        private  void CloseCurrentView(int option)
+        private void CloseCurrentView(int option)
         {
             if (option >= 0)
             {
@@ -114,7 +112,7 @@ namespace ExhibitionApp
         {
             if (menu != null)
             {
-                 menu.Close();
+                menu.Close();
                 //menu.Hide();
             }
         }
@@ -171,7 +169,7 @@ namespace ExhibitionApp
                 _FormBrowser.Close();
             }
         }
-       
+
         private void Form_FormBrowser_Closed(object sender, FormClosedEventArgs e)
         {
             _FormBrowser = null;
@@ -214,9 +212,10 @@ namespace ExhibitionApp
         {
             Console.WriteLine("DateTime.Now.Hour ==" + DateTime.Now.Hour + " DateTime.Now.Minute = " + DateTime.Now.Minute + " DateTime.Now.second ==" + DateTime.Now.Second);
 
-            if (DateTime.Now.Hour == MyAppSetting.GetInstance().ShutDownTime.Hour && 
+            if (DateTime.Now.Hour == MyAppSetting.GetInstance().ShutDownTime.Hour &&
                 DateTime.Now.Minute == MyAppSetting.GetInstance().ShutDownTime.Minute)
             {
+
                 timer1.Enabled = false;
 
                 SystemController.onShutDown();
