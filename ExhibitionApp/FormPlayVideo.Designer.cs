@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlayVideo));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.currentStateLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.button2 = new System.Windows.Forms.Button();
-            this.currentStateLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.currentStateLabel);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
@@ -61,6 +63,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(63, 588);
             this.panel1.TabIndex = 2;
+            // 
+            // currentStateLabel
+            // 
+            this.currentStateLabel.AutoSize = true;
+            this.currentStateLabel.Location = new System.Drawing.Point(13, 557);
+            this.currentStateLabel.Name = "currentStateLabel";
+            this.currentStateLabel.Size = new System.Drawing.Size(29, 12);
+            this.currentStateLabel.TabIndex = 3;
+            this.currentStateLabel.Text = "Wait";
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Location = new System.Drawing.Point(8, 216);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -81,26 +103,6 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(689, 588);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(8, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // currentStateLabel
-            // 
-            this.currentStateLabel.AutoSize = true;
-            this.currentStateLabel.Location = new System.Drawing.Point(13, 557);
-            this.currentStateLabel.Name = "currentStateLabel";
-            this.currentStateLabel.Size = new System.Drawing.Size(29, 12);
-            this.currentStateLabel.TabIndex = 3;
-            this.currentStateLabel.Text = "Wait";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -114,6 +116,20 @@
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_close.Image = global::ExhibitionApp.Properties.Resources.Close_48px;
+            this.btn_close.Location = new System.Drawing.Point(2, 66);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(58, 58);
+            this.btn_close.TabIndex = 4;
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // FormPlayVideo
             // 
@@ -148,6 +164,7 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label currentStateLabel;
+        private System.Windows.Forms.Button btn_close;
     }
 }
 
