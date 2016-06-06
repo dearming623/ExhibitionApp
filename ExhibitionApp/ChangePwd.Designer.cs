@@ -52,6 +52,7 @@
             this.tb_current_pwd.Name = "tb_current_pwd";
             this.tb_current_pwd.Size = new System.Drawing.Size(167, 21);
             this.tb_current_pwd.TabIndex = 1;
+            this.tb_current_pwd.UseSystemPasswordChar = true;
             // 
             // tb_new_pwd
             // 
@@ -59,6 +60,7 @@
             this.tb_new_pwd.Name = "tb_new_pwd";
             this.tb_new_pwd.Size = new System.Drawing.Size(167, 21);
             this.tb_new_pwd.TabIndex = 3;
+            this.tb_new_pwd.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -75,6 +77,7 @@
             this.tb_confirm_new_pwd.Name = "tb_confirm_new_pwd";
             this.tb_confirm_new_pwd.Size = new System.Drawing.Size(167, 21);
             this.tb_confirm_new_pwd.TabIndex = 5;
+            this.tb_confirm_new_pwd.UseSystemPasswordChar = true;
             // 
             // label3
             // 

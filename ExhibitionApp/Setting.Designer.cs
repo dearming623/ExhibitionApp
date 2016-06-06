@@ -31,28 +31,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_slide_path = new System.Windows.Forms.TextBox();
+            this.tb_video_path = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btn_save_slide_path = new System.Windows.Forms.Button();
+            this.btn_save_video_path = new System.Windows.Forms.Button();
+            this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSec = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,19 +85,19 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "视频文件路径";
             // 
-            // textBox1
+            // tb_slide_path
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(453, 21);
-            this.textBox1.TabIndex = 3;
+            this.tb_slide_path.Location = new System.Drawing.Point(79, 76);
+            this.tb_slide_path.Name = "tb_slide_path";
+            this.tb_slide_path.Size = new System.Drawing.Size(453, 21);
+            this.tb_slide_path.TabIndex = 3;
             // 
-            // textBox2
+            // tb_video_path
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(453, 21);
-            this.textBox2.TabIndex = 4;
+            this.tb_video_path.Location = new System.Drawing.Point(79, 157);
+            this.tb_video_path.Name = "tb_video_path";
+            this.tb_video_path.Size = new System.Drawing.Size(453, 21);
+            this.tb_video_path.TabIndex = 4;
             // 
             // label4
             // 
@@ -106,37 +108,39 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "文件管理:";
             // 
-            // button1
+            // btn_save_slide_path
             // 
-            this.button1.Location = new System.Drawing.Point(79, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "更改目录";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_save_slide_path.Location = new System.Drawing.Point(79, 104);
+            this.btn_save_slide_path.Name = "btn_save_slide_path";
+            this.btn_save_slide_path.Size = new System.Drawing.Size(75, 23);
+            this.btn_save_slide_path.TabIndex = 6;
+            this.btn_save_slide_path.Text = "更改目录";
+            this.btn_save_slide_path.UseVisualStyleBackColor = true;
+            this.btn_save_slide_path.Click += new System.EventHandler(this.btn_save_slide_path_Click);
             // 
-            // button2
+            // btn_save_video_path
             // 
-            this.button2.Location = new System.Drawing.Point(79, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "更改目录";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_save_video_path.Location = new System.Drawing.Point(79, 184);
+            this.btn_save_video_path.Name = "btn_save_video_path";
+            this.btn_save_video_path.Size = new System.Drawing.Size(75, 23);
+            this.btn_save_video_path.TabIndex = 7;
+            this.btn_save_video_path.Text = "更改目录";
+            this.btn_save_video_path.UseVisualStyleBackColor = true;
+            this.btn_save_video_path.Click += new System.EventHandler(this.btn_save_video_path_Click);
             // 
-            // numericUpDown1
+            // numericUpDownMin
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(141, 14);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownMin.Location = new System.Drawing.Point(141, 14);
+            this.numericUpDownMin.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(45, 21);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownMin.Name = "numericUpDownMin";
+            this.numericUpDownMin.Size = new System.Drawing.Size(45, 21);
+            this.numericUpDownMin.TabIndex = 8;
+            this.numericUpDownMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownMin.Value = new decimal(new int[] {
             22,
             0,
             0,
@@ -160,19 +164,19 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "分";
             // 
-            // numericUpDown2
+            // numericUpDownSec
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(212, 14);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numericUpDownSec.Location = new System.Drawing.Point(212, 14);
+            this.numericUpDownSec.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(45, 21);
-            this.numericUpDown2.TabIndex = 10;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericUpDownSec.Name = "numericUpDownSec";
+            this.numericUpDownSec.Size = new System.Drawing.Size(45, 21);
+            this.numericUpDownSec.TabIndex = 10;
+            this.numericUpDownSec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownSec.Value = new decimal(new int[] {
             30,
             0,
             0,
@@ -207,32 +211,16 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.del,
+            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(77, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(476, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 181);
             this.dataGridView1.TabIndex = 14;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "按钮名称";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "对应触发连接";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 280;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "操作";
-            this.Column3.Name = "Column3";
-            this.Column3.Text = "";
-            this.Column3.Width = 80;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label9
             // 
@@ -280,6 +268,33 @@
             this.label11.TabIndex = 19;
             this.label11.Text = "为了您的程序安全, 请定期修改密码";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "name";
+            this.Column1.HeaderText = "按钮名称";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "link";
+            this.Column2.HeaderText = "对应触发连接";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 280;
+            // 
+            // del
+            // 
+            this.del.HeaderText = "操作";
+            this.del.Name = "del";
+            this.del.Text = "删除";
+            this.del.UseColumnTextForButtonValue = true;
+            this.del.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 20;
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -294,14 +309,14 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDownSec);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.numericUpDownMin);
+            this.Controls.Add(this.btn_save_video_path);
+            this.Controls.Add(this.btn_save_slide_path);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_video_path);
+            this.Controls.Add(this.tb_slide_path);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -311,8 +326,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "设置";
             this.Load += new System.EventHandler(this.Setting_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,25 +339,27 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_slide_path;
+        private System.Windows.Forms.TextBox tb_video_path;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btn_save_slide_path;
+        private System.Windows.Forms.Button btn_save_video_path;
+        private System.Windows.Forms.NumericUpDown numericUpDownMin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDownSec;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewButtonColumn Column3;
         private System.Windows.Forms.Button btn_change_pwd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn del;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

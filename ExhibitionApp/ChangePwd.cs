@@ -45,16 +45,18 @@ namespace ExhibitionApp
 
             SavePwd(new_pwd);
 
+            this.Close();
+
         }
 
         private void SavePwd(string new_pwd)
         {
-            throw new NotImplementedException();
+            MyAppSetting.GetInstance().SavePwd(new_pwd);
         }
 
         private bool IsCurrentPwd(string pwd)
         {
-            throw new NotImplementedException();
+            return MyAppSetting.GetInstance().GetPassWordOfLogout() == pwd;
         }
     }
 }

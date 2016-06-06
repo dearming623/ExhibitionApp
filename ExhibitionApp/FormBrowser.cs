@@ -34,6 +34,8 @@ namespace ExhibitionApp
             }
         }
 
+        ChromiumWebBrowser wb = null;
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (!CefSharp.Cef.IsInitialized)
@@ -57,10 +59,12 @@ namespace ExhibitionApp
         private int loc_x = 180;
         private int loc_y = 10;
 
+
         private void FormBrowser_Load(object sender, EventArgs e)
         {
 
-            loadData();
+            // loadData();
+            lst = MyAppSetting.GetInstance().GetCompanyLinks();
 
             loc_x = 180;
             if (lst != null && lst.Count >0)
@@ -91,7 +95,7 @@ namespace ExhibitionApp
             Button btn = (Button)sender;
             MyLink link = (MyLink)btn.Tag;
 
-            ChromiumWebBrowser wb = new ChromiumWebBrowser(link.url);
+            wb = new ChromiumWebBrowser(link.url);
             wb.Dock = DockStyle.Fill;
 
             this.panel2.Controls.Clear();
@@ -117,5 +121,6 @@ namespace ExhibitionApp
             }
            
         }
+
     }
 }

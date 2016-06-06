@@ -29,7 +29,8 @@ namespace ExhibitionApp
                 tb_pwd.Focus();
                 return;
             }
-
+        
+           
 
             if (onConfirmPwdEvent != null)
             {
@@ -41,7 +42,7 @@ namespace ExhibitionApp
       
         private bool IsCurrentPwd(string pwd)
         {
-            return true;
+            return MyAppSetting.GetInstance().GetPassWordOfLogout() == pwd;
         }
     }
 }
