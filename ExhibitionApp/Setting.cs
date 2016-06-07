@@ -96,9 +96,13 @@ namespace ExhibitionApp
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "del") 
+
+            tb_btn_name.Text = dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
+            tb_link.Text = dataGridView1.Rows[e.RowIndex].Cells["link"].Value.ToString();
+
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "del")
             {
-                string name = this.dataGridView1.CurrentRow.Cells["Column1"].Value.ToString();
+                string name = this.dataGridView1.CurrentRow.Cells["name"].Value.ToString();
 
                 int affected = 0;
                 string err = "";
@@ -114,14 +118,86 @@ namespace ExhibitionApp
                 if (affected <= 0)
                 {
                     MessageBox.Show("更新失败!\n" + err);
-                }else
-                {
-                    this.dataGridView1.Rows.RemoveAt(e.RowIndex);
                 }
-               
+                else if(affected > 0)
+                {
+                    tb_btn_name.Text = "";
+                    tb_link.Text = "";
+                   this.dataGridView1.Rows.RemoveAt(e.RowIndex);
 
-               
+                }
+
             }
+
+
+          
+        }
+
+        private void btn_add_new_link_Click(object sender, EventArgs e)
+        {
+            if (tb_btn_name.Text.Trim() == "" || tb_link.Text.Trim() == "")
+            {
+                MessageBox.Show("插入数据不能为空，请按要求插入数据!");
+                return;
+            }
+
+            int affected = 0;
+
+            try
+            {
+                affected = SQLiteDBHelper.ExecuteSql("INSERT OR REPLACE INTO t_company_link ( name,link) VALUES ( '" + tb_btn_name.Text + "', '" + tb_link.Text + "')");
+
+            }
+            catch (Exception ex)
+            {
+            }
+           
+            if (affected ==0 )
+            {
+                MessageBox.Show("添加失败!");
+            }
+            else if (affected > 0)
+            {
+                MessageBox.Show("添加成功");
+            }
+
+            dataGridView1.DataSource = MyAppSetting.GetInstance().GetCompanyLinks2();
+        }
+
+        private void btn_del_record_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_save_record_Click(object sender, EventArgs e)
+        {
+            if (tb_btn_name.Text.Trim() == "" || tb_link.Text.Trim() == "")
+            {
+                MessageBox.Show("文本框不能为空!");
+                return;
+            }
+
+            int affected = 0;
+
+            try
+            {
+                affected = SQLiteDBHelper.ExecuteSql("update t_company_link set name = '" + tb_btn_name.Text + "',link =  '" + tb_link.Text + "' where name = '" + tb_btn_name.Text + "' "); 
+
+            }
+            catch (Exception ex)
+            {
+            }
+
+            if (affected == 0)
+            {
+                MessageBox.Show("更新失败!");
+            }
+            else if (affected > 0)
+            {
+                MessageBox.Show("更新成功");
+            }
+
+            dataGridView1.DataSource = MyAppSetting.GetInstance().GetCompanyLinks2();
         }
     }
 }

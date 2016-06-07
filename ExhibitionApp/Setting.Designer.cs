@@ -44,15 +44,20 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_add_record = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_save_record = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tb_btn_name = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tb_link = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -209,8 +214,8 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
+            this.name,
+            this.link,
             this.del,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(77, 230);
@@ -220,6 +225,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(480, 181);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label9
@@ -231,18 +237,19 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "链接设置:";
             // 
-            // button3
+            // btn_add_record
             // 
-            this.button3.Location = new System.Drawing.Point(478, 417);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "增加条目";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_add_record.Location = new System.Drawing.Point(133, 471);
+            this.btn_add_record.Name = "btn_add_record";
+            this.btn_add_record.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_record.TabIndex = 16;
+            this.btn_add_record.Text = "增加记录";
+            this.btn_add_record.UseVisualStyleBackColor = true;
+            this.btn_add_record.Click += new System.EventHandler(this.btn_add_new_link_Click);
             // 
             // btn_change_pwd
             // 
-            this.btn_change_pwd.Location = new System.Drawing.Point(76, 481);
+            this.btn_change_pwd.Location = new System.Drawing.Point(76, 530);
             this.btn_change_pwd.Name = "btn_change_pwd";
             this.btn_change_pwd.Size = new System.Drawing.Size(75, 23);
             this.btn_change_pwd.TabIndex = 17;
@@ -253,7 +260,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 464);
+            this.label10.Location = new System.Drawing.Point(14, 513);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 12);
             this.label10.TabIndex = 18;
@@ -262,24 +269,63 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(74, 463);
+            this.label11.Location = new System.Drawing.Point(74, 512);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(197, 12);
             this.label11.TabIndex = 19;
             this.label11.Text = "为了您的程序安全, 请定期修改密码";
             // 
-            // Column1
+            // btn_save_record
             // 
-            this.Column1.DataPropertyName = "name";
-            this.Column1.HeaderText = "按钮名称";
-            this.Column1.Name = "Column1";
+            this.btn_save_record.Location = new System.Drawing.Point(214, 471);
+            this.btn_save_record.Name = "btn_save_record";
+            this.btn_save_record.Size = new System.Drawing.Size(75, 23);
+            this.btn_save_record.TabIndex = 17;
+            this.btn_save_record.Text = "保存记录";
+            this.btn_save_record.UseVisualStyleBackColor = true;
+            this.btn_save_record.Click += new System.EventHandler(this.btn_save_record_Click);
             // 
-            // Column2
+            // label12
             // 
-            this.Column2.DataPropertyName = "link";
-            this.Column2.HeaderText = "对应触发连接";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 280;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(76, 422);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "按钮名字";
+            // 
+            // tb_btn_name
+            // 
+            this.tb_btn_name.Location = new System.Drawing.Point(133, 417);
+            this.tb_btn_name.Name = "tb_btn_name";
+            this.tb_btn_name.Size = new System.Drawing.Size(160, 21);
+            this.tb_btn_name.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(76, 449);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "网络链接";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "按钮名称";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // link
+            // 
+            this.link.DataPropertyName = "link";
+            this.link.HeaderText = "对应触发连接";
+            this.link.Name = "link";
+            this.link.ReadOnly = true;
+            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.link.Width = 280;
             // 
             // del
             // 
@@ -295,15 +341,27 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 20;
             // 
+            // tb_link
+            // 
+            this.tb_link.Location = new System.Drawing.Point(133, 444);
+            this.tb_link.Name = "tb_link";
+            this.tb_link.Size = new System.Drawing.Size(420, 21);
+            this.tb_link.TabIndex = 24;
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 531);
+            this.ClientSize = new System.Drawing.Size(565, 568);
+            this.Controls.Add(this.btn_save_record);
+            this.Controls.Add(this.btn_add_record);
+            this.Controls.Add(this.tb_link);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.tb_btn_name);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_change_pwd);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
@@ -352,14 +410,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_add_record;
         private System.Windows.Forms.Button btn_change_pwd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button btn_save_record;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tb_btn_name;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn link;
         private System.Windows.Forms.DataGridViewButtonColumn del;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.TextBox tb_link;
     }
 }

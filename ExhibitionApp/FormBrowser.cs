@@ -80,7 +80,7 @@ namespace ExhibitionApp
 
                     panel1.Controls.Add(btn);
 
-                    loc_x += btn.Width;
+                    loc_x += btn.Width + 30;
                 }
             }
         }
