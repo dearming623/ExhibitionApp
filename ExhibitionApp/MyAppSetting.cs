@@ -39,7 +39,7 @@ namespace ExhibitionApp
             if (arr != null && arr.Length == 2) 
             {
                 DateTime mid1 = DateTime.Now;
-                mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, mid1.Hour, Convert.ToInt32(arr[0]), Convert.ToInt32(arr[1]), 0);
+                mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, Convert.ToInt32(arr[0]), Convert.ToInt32(arr[1]), 0, 0);
                 ShutDownTime = mid1;
             }
         }

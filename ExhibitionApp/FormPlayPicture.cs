@@ -34,32 +34,46 @@ namespace ExhibitionApp
             string imgtype = "*.BMP|*.JPG|*.GIF|*.PNG";
             string[] ImageType = imgtype.Split('|');
 
-            string path = "";
-            if (String.IsNullOrEmpty(path))
+            string path = MyAppSetting.GetInstance().GetPathOfSlide();
+
+            if (String.IsNullOrEmpty(path) && !Directory.Exists(path) )
             {
-                path = Environment.CurrentDirectory+ "\\Pictures";
+                path = Environment.CurrentDirectory + "\\Pictures";
             }
 
             if (!Directory.Exists(path))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(path);
-                directoryInfo.Create();
+
+                try
+                {
+                    directoryInfo.Create();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("存放幻灯图片文件夹创建失败。");
+                }
+                
             }
 
-            for (int i = 0; i < ImageType.Length; i++)
+            if (Directory.Exists(path))
             {
-                string[] dirs = Directory.GetFiles(path, ImageType[i]);
-                // string[] dirs = Directory.GetFiles(@"d:\\My Documents\\My Pictures", "*.jpg");
-                int j = 0;
-                foreach (string dir in dirs)
+                for (int i = 0; i < ImageType.Length; i++)
                 {
-                    //Response.Write("<p>" + dir + "</p>");
-                    lst.Add(dir);
-                    addPicture(dir);
-                    j++;
+                    string[] dirs = Directory.GetFiles(path, ImageType[i]);
+                    // string[] dirs = Directory.GetFiles(@"d:\\My Documents\\My Pictures", "*.jpg");
+                    int j = 0;
+                    foreach (string dir in dirs)
+                    {
+                        //Response.Write("<p>" + dir + "</p>");
+                        lst.Add(dir);
+                        addPicture(dir);
+                        j++;
 
+                    }
                 }
             }
+          
 
 
             if (lst2 == null || lst2.Count == 0)

@@ -199,14 +199,40 @@ namespace ExhibitionApp
 
         public void LoadImages()
         {
-            DirectoryInfo Folder;
-            Folder = new DirectoryInfo(Environment.CurrentDirectory + "\\Pictures");
+            string videoPath = MyAppSetting.GetInstance().GetPathOfVideo();
+            if (String.IsNullOrEmpty(videoPath) && !Directory.Exists(videoPath))
+            {
+                videoPath = Environment.CurrentDirectory + "\\Videos";
+            }
 
+            if (!Directory.Exists(videoPath))
+            {
+                try
+                {
+                    Directory.CreateDirectory(videoPath);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("视频文件夹创建失败。");
+
+                    return;
+                }
+               
+            }
+            string videoImagePath = videoPath + "\\images";
+            DirectoryInfo Folder;
+            Folder = new DirectoryInfo(videoImagePath);
+
+            if (!Folder.Exists)
+            {
+                Folder.Create();
+            }
            
 
            // pnlThumb.Controls.Clear();
 
-            AllImageFielsNames = Directory.GetFiles(Environment.CurrentDirectory + "\\Pictures");
+            AllImageFielsNames = Directory.GetFiles(videoImagePath);
 
 
             FileInfo[] imageFiles = Folder.GetFiles();

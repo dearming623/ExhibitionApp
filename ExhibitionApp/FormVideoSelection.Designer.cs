@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.moveableList1 = new MoveableListLib.MoveableList();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlThumb = new System.Windows.Forms.Panel();
             this.btn_play_video = new System.Windows.Forms.PictureBox();
             this.picImageSlide = new System.Windows.Forms.PictureBox();
+            this.moveableList1 = new MoveableListLib.MoveableList();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,14 +51,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(338, 642);
             this.panel1.TabIndex = 0;
-            // 
-            // moveableList1
-            // 
-            this.moveableList1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.moveableList1.Location = new System.Drawing.Point(0, 0);
-            this.moveableList1.Name = "moveableList1";
-            this.moveableList1.Size = new System.Drawing.Size(340, 642);
-            this.moveableList1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -113,6 +105,14 @@
             this.picImageSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImageSlide.TabIndex = 0;
             this.picImageSlide.TabStop = false;
+            // 
+            // moveableList1
+            // 
+            this.moveableList1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.moveableList1.Location = new System.Drawing.Point(0, 0);
+            this.moveableList1.Name = "moveableList1";
+            this.moveableList1.Size = new System.Drawing.Size(340, 642);
+            this.moveableList1.TabIndex = 0;
             // 
             // FormVideoSelection
             // 

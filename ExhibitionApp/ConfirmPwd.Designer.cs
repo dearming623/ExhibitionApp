@@ -48,6 +48,7 @@
             this.tb_pwd.Name = "tb_pwd";
             this.tb_pwd.Size = new System.Drawing.Size(167, 21);
             this.tb_pwd.TabIndex = 1;
+            this.tb_pwd.Text = "8888";
             this.tb_pwd.UseSystemPasswordChar = true;
             // 
             // btn_confirm

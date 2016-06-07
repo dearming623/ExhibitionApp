@@ -43,6 +43,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_add_record = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
@@ -53,10 +57,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tb_btn_name = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_link = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSec)).BeginInit();
@@ -150,6 +150,7 @@
             0,
             0,
             0});
+            this.numericUpDownMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label5
             // 
@@ -186,6 +187,7 @@
             0,
             0,
             0});
+            this.numericUpDownSec.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label7
             // 
@@ -227,6 +229,37 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "按钮名称";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // link
+            // 
+            this.link.DataPropertyName = "link";
+            this.link.HeaderText = "对应触发连接";
+            this.link.Name = "link";
+            this.link.ReadOnly = true;
+            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.link.Width = 280;
+            // 
+            // del
+            // 
+            this.del.HeaderText = "操作";
+            this.del.Name = "del";
+            this.del.Text = "删除";
+            this.del.UseColumnTextForButtonValue = true;
+            this.del.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 20;
             // 
             // label9
             // 
@@ -309,37 +342,6 @@
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 23;
             this.label13.Text = "网络链接";
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "按钮名称";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // link
-            // 
-            this.link.DataPropertyName = "link";
-            this.link.HeaderText = "对应触发连接";
-            this.link.Name = "link";
-            this.link.ReadOnly = true;
-            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.link.Width = 280;
-            // 
-            // del
-            // 
-            this.del.HeaderText = "操作";
-            this.del.Name = "del";
-            this.del.Text = "删除";
-            this.del.UseColumnTextForButtonValue = true;
-            this.del.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 20;
             // 
             // tb_link
             // 

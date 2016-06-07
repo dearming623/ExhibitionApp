@@ -21,6 +21,9 @@ namespace ExhibitionApp
 
         public  MainView()
         {
+
+            MyAppSetting.GetInstance().Load();
+
             //OpenMenuView();
 
             //CloseMenuView();
@@ -29,7 +32,6 @@ namespace ExhibitionApp
 
             current_option = FormMenu.OPTION_PLAY_PIC;
 
-            MyAppSetting.GetInstance().Load();
 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
