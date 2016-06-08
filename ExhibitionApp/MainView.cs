@@ -221,6 +221,7 @@ namespace ExhibitionApp
                 timer1.Enabled = false;
 
                 SystemController.onShutDown();
+                //MessageBox.Show("测试，你已经关机");
             }
         }
     }

@@ -84,13 +84,13 @@ namespace ExhibitionApp
             return config[key];
         }
 
-        public void SaveShutDownTime(int min,int sec)
+        public void SaveShutDownTime(int hour,int min)
         {
             DateTime mid1 = DateTime.Now;
-            mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, mid1.Hour, min, sec, 0);
+            mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, hour,min , 0, 0);
             ShutDownTime = mid1;
 
-            string t = Convert.ToString(min) + ":" + Convert.ToString(sec);
+            string t = Convert.ToString(hour) + ":" + Convert.ToString(min);
       
             update(TIME_OF_SHUTDOWN, t);
         }

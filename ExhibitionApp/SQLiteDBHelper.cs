@@ -12,7 +12,7 @@ public class SQLiteDBHelper
     //public static string connectionString = ConfigurationManager.AppSettings["conn"].ToString();
     //public static string connectionString = "Data Source=G:\\mpos.db";
 
-    public static string connectionString = "Data Source=" + Environment.CurrentDirectory + "\\db\\local.db";
+    public static string connectionString = "Data Source=" + Environment.CurrentDirectory + "\\local.db";
 
     public static bool Exists(string strSql, params SQLiteParameter[] cmdParms)
     {

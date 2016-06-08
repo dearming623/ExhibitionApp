@@ -36,17 +36,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_save_slide_path = new System.Windows.Forms.Button();
             this.btn_save_video_path = new System.Windows.Forms.Button();
-            this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownHour = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDownSec = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_add_record = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
@@ -58,8 +54,11 @@
             this.tb_btn_name = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tb_link = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,24 +132,24 @@
             this.btn_save_video_path.UseVisualStyleBackColor = true;
             this.btn_save_video_path.Click += new System.EventHandler(this.btn_save_video_path_Click);
             // 
-            // numericUpDownMin
+            // numericUpDownHour
             // 
-            this.numericUpDownMin.Location = new System.Drawing.Point(141, 14);
-            this.numericUpDownMin.Maximum = new decimal(new int[] {
+            this.numericUpDownHour.Location = new System.Drawing.Point(141, 14);
+            this.numericUpDownHour.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.numericUpDownMin.Name = "numericUpDownMin";
-            this.numericUpDownMin.Size = new System.Drawing.Size(45, 21);
-            this.numericUpDownMin.TabIndex = 8;
-            this.numericUpDownMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDownMin.Value = new decimal(new int[] {
+            this.numericUpDownHour.Name = "numericUpDownHour";
+            this.numericUpDownHour.Size = new System.Drawing.Size(45, 21);
+            this.numericUpDownHour.TabIndex = 8;
+            this.numericUpDownHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownHour.Value = new decimal(new int[] {
             22,
             0,
             0,
             0});
-            this.numericUpDownMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDownHour.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label5
             // 
@@ -170,24 +169,24 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "分";
             // 
-            // numericUpDownSec
+            // numericUpDownMin
             // 
-            this.numericUpDownSec.Location = new System.Drawing.Point(212, 14);
-            this.numericUpDownSec.Maximum = new decimal(new int[] {
+            this.numericUpDownMin.Location = new System.Drawing.Point(212, 14);
+            this.numericUpDownMin.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.numericUpDownSec.Name = "numericUpDownSec";
-            this.numericUpDownSec.Size = new System.Drawing.Size(45, 21);
-            this.numericUpDownSec.TabIndex = 10;
-            this.numericUpDownSec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDownSec.Value = new decimal(new int[] {
+            this.numericUpDownMin.Name = "numericUpDownMin";
+            this.numericUpDownMin.Size = new System.Drawing.Size(45, 21);
+            this.numericUpDownMin.TabIndex = 10;
+            this.numericUpDownMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownMin.Value = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numericUpDownSec.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDownMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label7
             // 
@@ -212,54 +211,23 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.link,
-            this.del,
-            this.Column4});
+            this.del});
             this.dataGridView1.Location = new System.Drawing.Point(77, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(459, 181);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "按钮名称";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // link
-            // 
-            this.link.DataPropertyName = "link";
-            this.link.HeaderText = "对应触发连接";
-            this.link.Name = "link";
-            this.link.ReadOnly = true;
-            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.link.Width = 280;
-            // 
-            // del
-            // 
-            this.del.HeaderText = "操作";
-            this.del.Name = "del";
-            this.del.Text = "删除";
-            this.del.UseColumnTextForButtonValue = true;
-            this.del.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 20;
             // 
             // label9
             // 
@@ -272,7 +240,7 @@
             // 
             // btn_add_record
             // 
-            this.btn_add_record.Location = new System.Drawing.Point(133, 471);
+            this.btn_add_record.Location = new System.Drawing.Point(133, 474);
             this.btn_add_record.Name = "btn_add_record";
             this.btn_add_record.Size = new System.Drawing.Size(75, 23);
             this.btn_add_record.TabIndex = 16;
@@ -310,7 +278,7 @@
             // 
             // btn_save_record
             // 
-            this.btn_save_record.Location = new System.Drawing.Point(214, 471);
+            this.btn_save_record.Location = new System.Drawing.Point(214, 474);
             this.btn_save_record.Name = "btn_save_record";
             this.btn_save_record.Size = new System.Drawing.Size(75, 23);
             this.btn_save_record.TabIndex = 17;
@@ -321,7 +289,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(76, 422);
+            this.label12.Location = new System.Drawing.Point(76, 425);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 12);
             this.label12.TabIndex = 21;
@@ -329,7 +297,7 @@
             // 
             // tb_btn_name
             // 
-            this.tb_btn_name.Location = new System.Drawing.Point(133, 417);
+            this.tb_btn_name.Location = new System.Drawing.Point(133, 420);
             this.tb_btn_name.Name = "tb_btn_name";
             this.tb_btn_name.Size = new System.Drawing.Size(160, 21);
             this.tb_btn_name.TabIndex = 22;
@@ -337,7 +305,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(76, 449);
+            this.label13.Location = new System.Drawing.Point(76, 452);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 23;
@@ -345,16 +313,41 @@
             // 
             // tb_link
             // 
-            this.tb_link.Location = new System.Drawing.Point(133, 444);
+            this.tb_link.Location = new System.Drawing.Point(133, 447);
             this.tb_link.Name = "tb_link";
-            this.tb_link.Size = new System.Drawing.Size(420, 21);
+            this.tb_link.Size = new System.Drawing.Size(402, 21);
             this.tb_link.TabIndex = 24;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "按钮名称";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // link
+            // 
+            this.link.DataPropertyName = "link";
+            this.link.HeaderText = "对应触发连接";
+            this.link.Name = "link";
+            this.link.ReadOnly = true;
+            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.link.Width = 280;
+            // 
+            // del
+            // 
+            this.del.HeaderText = "操作";
+            this.del.Name = "del";
+            this.del.Text = "删除";
+            this.del.UseColumnTextForButtonValue = true;
+            this.del.Width = 60;
             // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 568);
+            this.ClientSize = new System.Drawing.Size(559, 568);
             this.Controls.Add(this.btn_save_record);
             this.Controls.Add(this.btn_add_record);
             this.Controls.Add(this.tb_link);
@@ -369,9 +362,9 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDownSec);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.numericUpDownMin);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.numericUpDownHour);
             this.Controls.Add(this.btn_save_video_path);
             this.Controls.Add(this.btn_save_slide_path);
             this.Controls.Add(this.label4);
@@ -386,8 +379,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "设置";
             this.Load += new System.EventHandler(this.Setting_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -404,10 +397,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_save_slide_path;
         private System.Windows.Forms.Button btn_save_video_path;
-        private System.Windows.Forms.NumericUpDown numericUpDownMin;
+        private System.Windows.Forms.NumericUpDown numericUpDownHour;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDownSec;
+        private System.Windows.Forms.NumericUpDown numericUpDownMin;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -421,10 +414,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tb_btn_name;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tb_link;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn link;
         private System.Windows.Forms.DataGridViewButtonColumn del;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.TextBox tb_link;
     }
 }

@@ -211,7 +211,9 @@
       <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="DB\local.db" />
+    <None Include="local.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -260,9 +262,7 @@
   <ItemGroup>
     <None Include="Resources\Play_Normal_128px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="libs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Close_48px.png" />
   </ItemGroup>

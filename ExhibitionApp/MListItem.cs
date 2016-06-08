@@ -22,18 +22,27 @@ namespace MoveableListLib
         public MListItem()
         {
             InitializeComponent();
-           
+
+            picBox.Tag = this;
         }
 
 
         public delegate void onItemClickEventHandler(object sender, EventArgs e);
         public event onItemClickEventHandler onItemClickEvent;
 
-        public void setPicture(string ImageFullName)
+
+        public string ImageFullName = "";
+        public string VideoFullName = "";
+
+        public void setPicture(string fullName)
         {
-            picBox.Image = Image.FromFile(ImageFullName);
-            picBox.Tag = ImageFullName;
+            picBox.Image = Image.FromFile(fullName);
+            ImageFullName = fullName;
+           // picBox.Tag = ImageFullName;
         }
+
+       
+
 
         private void label1_Click(object sender, EventArgs e)
         {

@@ -128,7 +128,7 @@
             this.MinimizeBox = false;
             this.Name = "FormVideoSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Form Video Selection";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormVideoSelection_Load);
             this.panel1.ResumeLayout(false);

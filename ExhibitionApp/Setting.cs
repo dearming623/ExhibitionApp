@@ -20,11 +20,11 @@ namespace ExhibitionApp
 
         private void Setting_Load(object sender, EventArgs e)
         {
-            numericUpDownMin.Value =  MyAppSetting.GetInstance().ShutDownTime.Minute;
-            numericUpDownSec.Value = MyAppSetting.GetInstance().ShutDownTime.Second;
+            numericUpDownHour.Value =  MyAppSetting.GetInstance().ShutDownTime.Hour;
+            numericUpDownMin.Value = MyAppSetting.GetInstance().ShutDownTime.Minute;
 
+            numericUpDownHour.ValueChanged += numericUpDown_ValueChanged;
             numericUpDownMin.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDownSec.ValueChanged += numericUpDown_ValueChanged;
 
             string path_slide = MyAppSetting.GetInstance().GetPathOfSlide();
             string path_video = MyAppSetting.GetInstance().GetPathOfVideo();
@@ -90,8 +90,8 @@ namespace ExhibitionApp
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             MyAppSetting.GetInstance().SaveShutDownTime(
-                Convert.ToInt32(numericUpDownMin.Value),
-                Convert.ToInt32( numericUpDownSec.Value));
+                Convert.ToInt32(numericUpDownHour.Value),
+                Convert.ToInt32( numericUpDownMin.Value));
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

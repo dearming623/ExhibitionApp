@@ -14,6 +14,7 @@ namespace ExhibitionApp
     public partial class FormVideoSelection : Form
     {
         private int imageindexs;
+        private MListItem CurrentItem = null;
 
         public FormVideoSelection()
         {
@@ -44,7 +45,8 @@ namespace ExhibitionApp
         {
             FormPlayVideo playvideo = new FormPlayVideo();
             playvideo.Show();
-            playvideo.play("d:\\CYON_15s.avi");
+            // playvideo.play("d:\\CYON_15s.avi");
+            playvideo.play(CurrentItem.VideoFullName);
         }
 
         private void loadImage()
@@ -256,6 +258,8 @@ namespace ExhibitionApp
 
                 MListItem item = new MListItem();
                 item.onItemClickEvent += Item_onItemClickEvent;
+                item.ImageFullName = img.FullName;
+                item.VideoFullName = videoPath + "\\" + img.Name.Replace(img.Extension, ".avi");
                 item.setPicture(img.FullName);
                 piclst.Add(item);
             }
@@ -268,12 +272,22 @@ namespace ExhibitionApp
           
             moveableList1.loadItemList(piclst);
 
+            if (piclst.Count > 0)
+            {
+                CurrentItem = (MListItem)piclst[0];
+                picImageSlide.Image = Image.FromFile(CurrentItem.ImageFullName);
+            }
+
         }
 
         private void Item_onItemClickEvent(object sender, EventArgs e)
         {
             PictureBox pb = sender as PictureBox;
-            picImageSlide.Image = Image.FromFile(Convert.ToString(pb.Tag));
+
+            CurrentItem = (MListItem)pb.Tag;
+            picImageSlide.Image = Image.FromFile(CurrentItem.ImageFullName);
+
+            MessageBox.Show("video full name:" + CurrentItem.VideoFullName);
         }
     }
 }
