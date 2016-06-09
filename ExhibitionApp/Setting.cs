@@ -47,6 +47,13 @@ namespace ExhibitionApp
             }
 
             dataGridView1.DataSource = MyAppSetting.GetInstance().GetCompanyLinks2();
+
+
+            if (cb_start_run.Items != null && cb_start_run.Items.Count > 0)
+            {
+                cb_start_run.SelectedIndex = MyAppSetting.GetInstance().GetStartRun();
+            }
+
         }
 
         private void btn_change_pwd_Click(object sender, EventArgs e)
@@ -198,6 +205,14 @@ namespace ExhibitionApp
             }
 
             dataGridView1.DataSource = MyAppSetting.GetInstance().GetCompanyLinks2();
+        }
+
+        private void cb_start_run_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_start_run.Items != null && cb_start_run.Items.Count > 0 && cb_start_run.SelectedItem != null)
+            {
+                MyAppSetting.GetInstance().SaveStartRun(cb_start_run.SelectedIndex) ;
+            }
         }
     }
 }

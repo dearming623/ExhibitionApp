@@ -287,7 +287,7 @@ namespace ExhibitionApp
             CurrentItem = (MListItem)pb.Tag;
             picImageSlide.Image = Image.FromFile(CurrentItem.ImageFullName);
 
-            MessageBox.Show("video full name:" + CurrentItem.VideoFullName);
+           // MessageBox.Show("video full name:" + CurrentItem.VideoFullName);
         }
     }
 }

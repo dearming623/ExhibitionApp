@@ -16,7 +16,7 @@ namespace ExhibitionApp
         }
 
         public const int OPTION_PLAY_PIC = 0;
-        public const  int OPTION_PLAY_VIDEO = 1;
+        public const int OPTION_PLAY_VIDEO = 1;
         public const int OPTION_BROWSER = 2;
         public const int OPTION_SETTING = 3;
         public const int OPTION_EXIT_SYSTEM = 4;

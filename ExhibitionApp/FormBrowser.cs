@@ -72,6 +72,7 @@ namespace ExhibitionApp
                 for (int i = 0; i < lst.Count; i++)
                 {
                     Button btn = new Button();
+                    //btn.Size = new Size(200,80); 
                     btn.Click += Btn_Click;
                     btn.Text = lst[i].websiteName;
                     btn.Tag = lst[i];

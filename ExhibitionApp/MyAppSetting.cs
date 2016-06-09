@@ -17,6 +17,7 @@ namespace ExhibitionApp
         public static string PATH_OF_SLIDE = "PathOfSlide";
         public static string PATH_OF_VIDEO = "PahtOfVideo";
         public static string PWD_OF_LOGOUT = "PasswordOfLogout";
+        public static string START_RUN = "StartRun";
 
         public void Load()
         {
@@ -130,8 +131,7 @@ namespace ExhibitionApp
         public int DeleteLink(string name)
         {
           return SQLiteDBHelper.ExecuteSql("DELETE FROM t_company_link WHERE name='" + name +"' ");
-           
-           
+            
         }
 
         public List<MyLink> GetCompanyLinks()
@@ -166,6 +166,24 @@ namespace ExhibitionApp
             }
 
             return dt;
+        }
+
+        public void SaveStartRun(int index)
+        {
+            update(START_RUN, Convert.ToString(index));
+        }
+
+        public int GetStartRun()
+        {
+            if (config.ContainsKey(START_RUN))
+            {
+                return Convert.ToInt32(config[START_RUN]);
+            }
+            else
+            {
+                return FormMenu.OPTION_PLAY_PIC;
+            }
+            
         }
 
         private static MyAppSetting instance;

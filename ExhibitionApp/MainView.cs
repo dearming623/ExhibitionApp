@@ -28,9 +28,12 @@ namespace ExhibitionApp
 
             //CloseMenuView();
 
-            OpenPlayPicView();
 
-            current_option = FormMenu.OPTION_PLAY_PIC;
+            Menu_onOptionClickEvent(MyAppSetting.GetInstance().GetStartRun());
+
+            //OpenPlayPicView();
+
+            //current_option = FormMenu.OPTION_PLAY_PIC;
 
 
             this.timer1.Interval = 1000;
@@ -38,6 +41,7 @@ namespace ExhibitionApp
             timer1.Enabled = true;
    
         }
+
 
         private void OpenMenuView()
         {

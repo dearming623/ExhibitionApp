@@ -43,6 +43,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_add_record = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
@@ -54,9 +57,8 @@
             this.tb_btn_name = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tb_link = new System.Windows.Forms.TextBox();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cb_start_run = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 61);
+            this.label2.Location = new System.Drawing.Point(77, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 12);
             this.label2.TabIndex = 1;
@@ -83,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 142);
+            this.label3.Location = new System.Drawing.Point(77, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 2;
@@ -91,14 +93,14 @@
             // 
             // tb_slide_path
             // 
-            this.tb_slide_path.Location = new System.Drawing.Point(79, 76);
+            this.tb_slide_path.Location = new System.Drawing.Point(79, 81);
             this.tb_slide_path.Name = "tb_slide_path";
             this.tb_slide_path.Size = new System.Drawing.Size(453, 21);
             this.tb_slide_path.TabIndex = 3;
             // 
             // tb_video_path
             // 
-            this.tb_video_path.Location = new System.Drawing.Point(79, 157);
+            this.tb_video_path.Location = new System.Drawing.Point(79, 162);
             this.tb_video_path.Name = "tb_video_path";
             this.tb_video_path.Size = new System.Drawing.Size(453, 21);
             this.tb_video_path.TabIndex = 4;
@@ -106,7 +108,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 61);
+            this.label4.Location = new System.Drawing.Point(12, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 12);
             this.label4.TabIndex = 5;
@@ -114,7 +116,7 @@
             // 
             // btn_save_slide_path
             // 
-            this.btn_save_slide_path.Location = new System.Drawing.Point(79, 104);
+            this.btn_save_slide_path.Location = new System.Drawing.Point(79, 109);
             this.btn_save_slide_path.Name = "btn_save_slide_path";
             this.btn_save_slide_path.Size = new System.Drawing.Size(75, 23);
             this.btn_save_slide_path.TabIndex = 6;
@@ -124,7 +126,7 @@
             // 
             // btn_save_video_path
             // 
-            this.btn_save_video_path.Location = new System.Drawing.Point(79, 184);
+            this.btn_save_video_path.Location = new System.Drawing.Point(79, 189);
             this.btn_save_video_path.Name = "btn_save_video_path";
             this.btn_save_video_path.Size = new System.Drawing.Size(75, 23);
             this.btn_save_video_path.TabIndex = 7;
@@ -219,7 +221,7 @@
             this.name,
             this.link,
             this.del});
-            this.dataGridView1.Location = new System.Drawing.Point(77, 230);
+            this.dataGridView1.Location = new System.Drawing.Point(77, 235);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
@@ -228,95 +230,6 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 230);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 12);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "链接设置:";
-            // 
-            // btn_add_record
-            // 
-            this.btn_add_record.Location = new System.Drawing.Point(133, 474);
-            this.btn_add_record.Name = "btn_add_record";
-            this.btn_add_record.Size = new System.Drawing.Size(75, 23);
-            this.btn_add_record.TabIndex = 16;
-            this.btn_add_record.Text = "增加记录";
-            this.btn_add_record.UseVisualStyleBackColor = true;
-            this.btn_add_record.Click += new System.EventHandler(this.btn_add_new_link_Click);
-            // 
-            // btn_change_pwd
-            // 
-            this.btn_change_pwd.Location = new System.Drawing.Point(76, 530);
-            this.btn_change_pwd.Name = "btn_change_pwd";
-            this.btn_change_pwd.Size = new System.Drawing.Size(75, 23);
-            this.btn_change_pwd.TabIndex = 17;
-            this.btn_change_pwd.Text = "修改密码";
-            this.btn_change_pwd.UseVisualStyleBackColor = true;
-            this.btn_change_pwd.Click += new System.EventHandler(this.btn_change_pwd_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 513);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 12);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "安全设置:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(74, 512);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(197, 12);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "为了您的程序安全, 请定期修改密码";
-            // 
-            // btn_save_record
-            // 
-            this.btn_save_record.Location = new System.Drawing.Point(214, 474);
-            this.btn_save_record.Name = "btn_save_record";
-            this.btn_save_record.Size = new System.Drawing.Size(75, 23);
-            this.btn_save_record.TabIndex = 17;
-            this.btn_save_record.Text = "保存记录";
-            this.btn_save_record.UseVisualStyleBackColor = true;
-            this.btn_save_record.Click += new System.EventHandler(this.btn_save_record_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(76, 425);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "按钮名字";
-            // 
-            // tb_btn_name
-            // 
-            this.tb_btn_name.Location = new System.Drawing.Point(133, 420);
-            this.tb_btn_name.Name = "tb_btn_name";
-            this.tb_btn_name.Size = new System.Drawing.Size(160, 21);
-            this.tb_btn_name.TabIndex = 22;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(76, 452);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 12);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "网络链接";
-            // 
-            // tb_link
-            // 
-            this.tb_link.Location = new System.Drawing.Point(133, 447);
-            this.tb_link.Name = "tb_link";
-            this.tb_link.Size = new System.Drawing.Size(402, 21);
-            this.tb_link.TabIndex = 24;
             // 
             // name
             // 
@@ -343,11 +256,125 @@
             this.del.UseColumnTextForButtonValue = true;
             this.del.Width = 60;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 235);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 12);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "链接设置:";
+            // 
+            // btn_add_record
+            // 
+            this.btn_add_record.Location = new System.Drawing.Point(133, 479);
+            this.btn_add_record.Name = "btn_add_record";
+            this.btn_add_record.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_record.TabIndex = 16;
+            this.btn_add_record.Text = "增加记录";
+            this.btn_add_record.UseVisualStyleBackColor = true;
+            this.btn_add_record.Click += new System.EventHandler(this.btn_add_new_link_Click);
+            // 
+            // btn_change_pwd
+            // 
+            this.btn_change_pwd.Location = new System.Drawing.Point(76, 535);
+            this.btn_change_pwd.Name = "btn_change_pwd";
+            this.btn_change_pwd.Size = new System.Drawing.Size(75, 23);
+            this.btn_change_pwd.TabIndex = 17;
+            this.btn_change_pwd.Text = "修改密码";
+            this.btn_change_pwd.UseVisualStyleBackColor = true;
+            this.btn_change_pwd.Click += new System.EventHandler(this.btn_change_pwd_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 518);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 12);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "安全设置:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(74, 517);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(197, 12);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "为了您的程序安全, 请定期修改密码";
+            // 
+            // btn_save_record
+            // 
+            this.btn_save_record.Location = new System.Drawing.Point(214, 479);
+            this.btn_save_record.Name = "btn_save_record";
+            this.btn_save_record.Size = new System.Drawing.Size(75, 23);
+            this.btn_save_record.TabIndex = 17;
+            this.btn_save_record.Text = "保存记录";
+            this.btn_save_record.UseVisualStyleBackColor = true;
+            this.btn_save_record.Click += new System.EventHandler(this.btn_save_record_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(76, 430);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "按钮名字";
+            // 
+            // tb_btn_name
+            // 
+            this.tb_btn_name.Location = new System.Drawing.Point(133, 425);
+            this.tb_btn_name.Name = "tb_btn_name";
+            this.tb_btn_name.Size = new System.Drawing.Size(160, 21);
+            this.tb_btn_name.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(76, 457);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "网络链接";
+            // 
+            // tb_link
+            // 
+            this.tb_link.Location = new System.Drawing.Point(133, 452);
+            this.tb_link.Name = "tb_link";
+            this.tb_link.Size = new System.Drawing.Size(402, 21);
+            this.tb_link.TabIndex = 24;
+            // 
+            // cb_start_run
+            // 
+            this.cb_start_run.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_start_run.FormattingEnabled = true;
+            this.cb_start_run.Items.AddRange(new object[] {
+            "图片浏览",
+            "视频浏览",
+            "页面浏览"});
+            this.cb_start_run.Location = new System.Drawing.Point(193, 40);
+            this.cb_start_run.Name = "cb_start_run";
+            this.cb_start_run.Size = new System.Drawing.Size(121, 20);
+            this.cb_start_run.TabIndex = 25;
+            this.cb_start_run.SelectedIndexChanged += new System.EventHandler(this.cb_start_run_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(77, 44);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 12);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "程序启动时首先打开";
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 568);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cb_start_run);
             this.Controls.Add(this.btn_save_record);
             this.Controls.Add(this.btn_add_record);
             this.Controls.Add(this.tb_link);
@@ -418,5 +445,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn link;
         private System.Windows.Forms.DataGridViewButtonColumn del;
+        private System.Windows.Forms.ComboBox cb_start_run;
+        private System.Windows.Forms.Label label14;
     }
 }
