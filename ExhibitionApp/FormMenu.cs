@@ -53,7 +53,7 @@ namespace ExhibitionApp
                 _ConfirmPwd = new ConfirmPwd();
                
                 _ConfirmPwd.FormClosed += FormConfirmPwd_Closed;
-                _ConfirmPwd.onConfirmPwdEvent += _ConfirmPwd_onConfirmPwdEvent;
+                //_ConfirmPwd.onConfirmPwdEvent += _ConfirmPwd_onConfirmPwdEvent;
 
                 _ConfirmPwd.Show();
             }

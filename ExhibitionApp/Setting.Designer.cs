@@ -59,9 +59,11 @@
             this.tb_link = new System.Windows.Forms.TextBox();
             this.cb_start_run = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pb_popup_softkeyboard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -368,11 +370,23 @@
             this.label14.TabIndex = 26;
             this.label14.Text = "程序启动时首先打开";
             // 
+            // pb_popup_softkeyboard
+            // 
+            this.pb_popup_softkeyboard.Image = global::ExhibitionApp.Properties.Resources.keyboard_32px;
+            this.pb_popup_softkeyboard.Location = new System.Drawing.Point(490, 12);
+            this.pb_popup_softkeyboard.Name = "pb_popup_softkeyboard";
+            this.pb_popup_softkeyboard.Size = new System.Drawing.Size(42, 31);
+            this.pb_popup_softkeyboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pb_popup_softkeyboard.TabIndex = 27;
+            this.pb_popup_softkeyboard.TabStop = false;
+            this.pb_popup_softkeyboard.Click += new System.EventHandler(this.Softkeyboard_Click);
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 568);
+            this.Controls.Add(this.pb_popup_softkeyboard);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cb_start_run);
             this.Controls.Add(this.btn_save_record);
@@ -409,6 +423,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,5 +462,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn del;
         private System.Windows.Forms.ComboBox cb_start_run;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pb_popup_softkeyboard;
     }
 }

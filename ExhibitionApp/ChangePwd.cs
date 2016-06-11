@@ -58,5 +58,19 @@ namespace ExhibitionApp
         {
             return MyAppSetting.GetInstance().GetPassWordOfLogout() == pwd;
         }
+
+        private void Softkeyboard_Click(object sender, EventArgs e)
+        {
+
+            if (SystemController.isShowingSoftInput())
+            {
+                SystemController.onCloseWindowSoftInput();
+            }
+            else
+            {
+                SystemController.onOpenWindowSoftInput();
+            }
+            
+        }
     }
 }

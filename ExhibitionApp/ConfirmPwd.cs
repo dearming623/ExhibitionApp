@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -10,18 +11,27 @@ namespace ExhibitionApp
 {
     public partial class ConfirmPwd : Form
     {
+       
+
         public ConfirmPwd()
         {
             InitializeComponent();
         }
 
-        public delegate void onConfirmPwdEventHandler(object sender, EventArgs e);
-        public event onConfirmPwdEventHandler onConfirmPwdEvent;
+        //public delegate void onConfirmPwdEventHandler(object sender, EventArgs e);
+        //public event onConfirmPwdEventHandler onConfirmPwdEvent;
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             string pwd = tb_pwd.Text.Trim();
-           
+
+
+            if (string.IsNullOrEmpty(pwd))
+            {
+                MessageBox.Show("请输入用户密码!");
+                tb_pwd.Focus();
+                return;
+            }
 
             if (!IsCurrentPwd(pwd))
             {
@@ -29,13 +39,13 @@ namespace ExhibitionApp
                 tb_pwd.Focus();
                 return;
             }
-        
-           
 
-            if (onConfirmPwdEvent != null)
-            {
-                onConfirmPwdEvent(sender, e);
-            }
+            SystemController.onExitApplication();
+
+            //if (onConfirmPwdEvent != null)
+            //{
+            //    onConfirmPwdEvent(sender, e);
+            //}
 
         }
 
@@ -43,6 +53,22 @@ namespace ExhibitionApp
         private bool IsCurrentPwd(string pwd)
         {
             return MyAppSetting.GetInstance().GetPassWordOfLogout() == pwd;
+        }
+
+        private void Softkeyboard_Click(object sender, EventArgs e)
+        {
+
+            if (SystemController.isShowingSoftInput())
+            {
+                SystemController.onCloseWindowSoftInput();
+            }
+            else
+            {
+                SystemController.onOpenWindowSoftInput();
+            }
+
+            tb_pwd.Focus();
+            
         }
     }
 }

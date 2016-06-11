@@ -173,7 +173,16 @@ namespace ExhibitionApp
                 ias.DrawCompleted += Ias_DrawCompleted;
 
                 SelectAnimator(type);
-                ias.DrawAnimator(animatorType);
+
+                if (oldBmp == null)
+                {
+                    ias.DrawAnimator(animatorType);
+                }
+                else
+                {
+                    ias.DrawAnimator(animatorType, oldBmp);
+                }
+               
             }
         }
 
@@ -186,6 +195,7 @@ namespace ExhibitionApp
 
         private void Ias_DrawCompleted(object sender, EventArgs e)
         {
+            oldBmp = ias.OutBmp;
             picIsPlaying = false;
         }
 
@@ -194,6 +204,7 @@ namespace ExhibitionApp
             picIsPlaying = true;
         }
 
+        private Bitmap oldBmp = null;
 
         // 所有动画效果选择RadioButton的CheckedChanged事件
         private void SelectAnimator(int type)

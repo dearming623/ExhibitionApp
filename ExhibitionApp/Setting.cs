@@ -214,5 +214,19 @@ namespace ExhibitionApp
                 MyAppSetting.GetInstance().SaveStartRun(cb_start_run.SelectedIndex) ;
             }
         }
+
+        private void Softkeyboard_Click(object sender, EventArgs e)
+        {
+
+            if (SystemController.isShowingSoftInput())
+            {
+                SystemController.onCloseWindowSoftInput();
+            }
+            else
+            {
+                SystemController.onOpenWindowSoftInput();
+            }
+
+        }
     }
 }

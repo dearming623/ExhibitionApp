@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_pwd = new System.Windows.Forms.TextBox();
             this.btn_confirm = new System.Windows.Forms.Button();
+            this.pb_popup_softkeyboard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,11 +63,23 @@
             this.btn_confirm.UseVisualStyleBackColor = true;
             this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
+            // pb_popup_softkeyboard
+            // 
+            this.pb_popup_softkeyboard.Image = global::ExhibitionApp.Properties.Resources.keyboard_32px;
+            this.pb_popup_softkeyboard.Location = new System.Drawing.Point(254, 12);
+            this.pb_popup_softkeyboard.Name = "pb_popup_softkeyboard";
+            this.pb_popup_softkeyboard.Size = new System.Drawing.Size(42, 31);
+            this.pb_popup_softkeyboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pb_popup_softkeyboard.TabIndex = 7;
+            this.pb_popup_softkeyboard.TabStop = false;
+            this.pb_popup_softkeyboard.Click += new System.EventHandler(this.Softkeyboard_Click);
+            // 
             // ConfirmPwd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 98);
+            this.ClientSize = new System.Drawing.Size(309, 89);
+            this.Controls.Add(this.pb_popup_softkeyboard);
             this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.tb_pwd);
             this.Controls.Add(this.label1);
@@ -74,6 +88,7 @@
             this.Name = "ConfirmPwd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "密码验证";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +99,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_pwd;
         private System.Windows.Forms.Button btn_confirm;
+        private System.Windows.Forms.PictureBox pb_popup_softkeyboard;
     }
 }

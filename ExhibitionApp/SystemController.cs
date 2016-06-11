@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 
 namespace ExhibitionApp
 {
@@ -26,6 +28,8 @@ namespace ExhibitionApp
         [DllImport("user32.dll", ExactSpelling = true, SetLastError = true)]
         internal static extern bool ExitWindowsEx(int flg, int rea);
 
+        
+
         // 这个结构体将会传递给API。使用StructLayout   
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         internal struct TokPriv1Luid
@@ -41,6 +45,8 @@ namespace ExhibitionApp
         internal const int TOKEN_ADJUST_PRIVILEGES = 0x00000020;
         internal const string SE_SHUTDOWN_NAME = "SeShutdownPrivilege";
         internal const int EWX_SHUTDOWN = 0x00000001;
+        private static Process onScreenKeyboardProc;
+
         //internal const int EWX_LOGOFF = 0x00000000;   
         //internal const int EWX_REBOOT = 0x00000002;   
         //internal const int EWX_FORCE = 0x00000004;   
@@ -66,6 +72,41 @@ namespace ExhibitionApp
 
         public static void onShutDown(){
             DoExitWin(EWX_SHUTDOWN);
+        }
+
+
+        public static void onOpenWindowSoftInput()
+        {
+            string progFiles = @"C:\Program Files\Common Files\Microsoft Shared\ink";
+            string onScreenKeyboardPath = System.IO.Path.Combine(progFiles, "TabTip.exe");
+            onScreenKeyboardProc = System.Diagnostics.Process.Start(onScreenKeyboardPath);
+        }
+
+        public static void onCloseWindowSoftInput()
+        {
+            //Kill all on screen keyboards
+            Process[] oskProcessArray = Process.GetProcessesByName("TabTip");
+            foreach (Process onscreenProcess in oskProcessArray)
+            {
+                onscreenProcess.Kill();
+            }
+        }
+
+        public static bool isShowingSoftInput()
+        {
+            Process[] oskProcessArray = Process.GetProcessesByName("TabTip");
+            return oskProcessArray.Length > 0 ? true : false;
+           
+        }
+
+        public static void onExitApplication()
+        {
+            if (SystemController.isShowingSoftInput())
+            {
+                SystemController.onCloseWindowSoftInput();
+            }
+
+            Application.Exit();
         }
     }
 }
