@@ -70,6 +70,15 @@ namespace MoveableListLib
 
            
         }
+
+        public void setAllSelection(bool v)
+        {
+            foreach (var item in this.Controls)
+            {
+                MListItem render = (MListItem) item;
+                render.setSelection(v);
+            }
+        }
     }
 
 }

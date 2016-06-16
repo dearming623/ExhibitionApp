@@ -71,8 +71,15 @@ namespace ExhibitionApp
             {
                 for (int i = 0; i < lst.Count; i++)
                 {
-                    Button btn = new Button();
-                    //btn.Size = new Size(200,80); 
+                    //Button btn = new Button();
+                    //btn.BackgroundImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
+                    //btn.AutoSize = true;
+
+
+                    ImageButton btn = new ImageButton();
+                    
+                    btn.Size = new Size(80, 80);
+                    btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
                     btn.Click += Btn_Click;
                     btn.Text = lst[i].websiteName;
                     btn.Tag = lst[i];
@@ -81,24 +88,37 @@ namespace ExhibitionApp
 
                     panel1.Controls.Add(btn);
 
-                    loc_x += btn.Width + 30;
+                    loc_x += btn.Width +1;
                 }
             }
         }
 
         private void Btn_Click(object sender, EventArgs e)
         {
+
+            foreach (var item in  panel1.Controls)
+            {
+                if (item.GetType() == typeof(ImageButton))
+                {
+                    ImageButton render = (ImageButton)item;
+                    render.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
+                }
+                
+            }
+
             if (!CefSharp.Cef.IsInitialized)
             {
                 CefSharp.Cef.Initialize();
             }
 
-            Button btn = (Button)sender;
+            ImageButton btn = (ImageButton)sender;
             MyLink link = (MyLink)btn.Tag;
 
             wb = new ChromiumWebBrowser(link.url);
             wb.Dock = DockStyle.Fill;
 
+
+            btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button1;
             this.panel2.Controls.Clear();
             this.panel2.Controls.Add(wb);
         }

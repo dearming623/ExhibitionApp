@@ -51,6 +51,8 @@ namespace MoveableListLib
             {
                 onItemClickEvent(sender, e);
             }
+
+            this.BackgroundImage = ExhibitionApp.Properties.Resources.video_thumbnail;
         }
 
         private void MListItem_MouseDown(object sender, MouseEventArgs e)
@@ -74,6 +76,20 @@ namespace MoveableListLib
                     reloadCtrlPosition(xx);
                  }
             }
+        }
+
+        public void setSelection(bool v)
+        {
+            if (v)
+            {
+                this.BackgroundImage = ExhibitionApp.Properties.Resources.video_thumbnail;
+               
+            }
+            else
+            {
+                this.BackgroundImage = null;
+            }
+            
         }
 
         private void MListItem_MouseUp(object sender, MouseEventArgs e)

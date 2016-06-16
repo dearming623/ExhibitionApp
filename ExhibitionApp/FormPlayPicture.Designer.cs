@@ -49,6 +49,7 @@
             // 
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+           
             // 
             // FormPlayPicture
             // 
@@ -74,6 +75,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        
     }
 }
 

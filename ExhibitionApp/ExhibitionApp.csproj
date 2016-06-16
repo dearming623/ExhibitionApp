@@ -56,11 +56,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -279,6 +279,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Close_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videoNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videoDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navigation Button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navigation Button1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

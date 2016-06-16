@@ -142,4 +142,61 @@
   <data name="keyboard_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exitDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exitNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settingDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settingNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="videoDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\videoDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="videoNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\videoNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="video_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\video_list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="video_thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\video_thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="webDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\webDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="webNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\webNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Navigation_Button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Navigation Button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Navigation_Button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Navigation Button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

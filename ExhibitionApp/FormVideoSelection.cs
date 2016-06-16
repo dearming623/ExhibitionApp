@@ -278,10 +278,14 @@ namespace ExhibitionApp
                 picImageSlide.Image = Image.FromFile(CurrentItem.ImageFullName);
             }
 
+            moveableList1.setAllSelection(false);
+
         }
 
         private void Item_onItemClickEvent(object sender, EventArgs e)
         {
+            moveableList1.setAllSelection(false);
+
             PictureBox pb = sender as PictureBox;
 
             CurrentItem = (MListItem)pb.Tag;
