@@ -85,6 +85,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatorImage.cs" />
+    <Compile Include="ChangePwd2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePwd2.Designer.cs">
+      <DependentUpon>ChangePwd2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmPwd2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmPwd2.Designer.cs">
+      <DependentUpon>ConfirmPwd2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -165,6 +177,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting2.Designer.cs">
+      <DependentUpon>Setting2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +191,12 @@
     </Compile>
     <Compile Include="SQLiteDBHelper.cs" />
     <Compile Include="SystemController.cs" />
+    <EmbeddedResource Include="ChangePwd2.resx">
+      <DependentUpon>ChangePwd2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmPwd2.resx">
+      <DependentUpon>ConfirmPwd2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmPwd.resx">
       <DependentUpon>ConfirmPwd.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Setting2.resx">
+      <DependentUpon>Setting2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +384,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Navigation Button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

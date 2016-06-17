@@ -41,7 +41,12 @@ namespace MoveableListLib
            // picBox.Tag = ImageFullName;
         }
 
-       
+        public void setDisplayName(string name)
+        {
+            lbl_video_name.Text = name;
+        }
+
+
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,7 +57,7 @@ namespace MoveableListLib
                 onItemClickEvent(sender, e);
             }
 
-            this.BackgroundImage = ExhibitionApp.Properties.Resources.video_thumbnail;
+            setSelection(true);
         }
 
         private void MListItem_MouseDown(object sender, MouseEventArgs e)
@@ -83,11 +88,14 @@ namespace MoveableListLib
             if (v)
             {
                 this.BackgroundImage = ExhibitionApp.Properties.Resources.video_thumbnail;
-               
+                this.lbl_video_name.BackColor = Color.Transparent;
+                //this.lbl_video_name.Font =  new Font("宋体", 18, FontStyle.Bold);
             }
             else
             {
                 this.BackgroundImage = null;
+                this.lbl_video_name.BackColor = Color.FromArgb(0x33, 0x33, 0x33);
+                // this.lbl_video_name.Font = new Font("宋体", 13, FontStyle.Bold);
             }
             
         }
@@ -140,7 +148,7 @@ namespace MoveableListLib
         {
             foreach (Control ctrl in this.Parent.Controls)
             {
-                ctrl.Location = new Point(0, ctrl.Location.Y + xx);
+                ctrl.Location = new Point(MoveableList.ITEM_LOCATION_X, ctrl.Location.Y + xx);
             }
             //int count=this.Parent.Controls.Count;
             ////重新计算位置

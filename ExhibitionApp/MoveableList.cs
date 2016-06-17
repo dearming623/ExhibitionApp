@@ -16,9 +16,11 @@ namespace MoveableListLib
         public ArrayList arrList = new ArrayList();
 
         //最大数目
-       // private int max =10;
+        // private int max =10;
         //单元数目
-       // private int unit = 10;
+        // private int unit = 10;
+
+        public static int ITEM_LOCATION_X = 0;
 
         public MoveableList()
         {
@@ -37,7 +39,7 @@ namespace MoveableListLib
             for (int i = 0; i < arrList.Count; i++)
             {
                 MListItem item = (MListItem)arrList[i];
-                item.Location = new Point(0, item.Height *i + lastPosition);
+                item.Location = new Point(ITEM_LOCATION_X, item.Height *i + lastPosition);
                 this.Controls.Add(item);
             }
         }
@@ -63,9 +65,10 @@ namespace MoveableListLib
             int i = 0;
             foreach (MListItem item in lst)
             {
-                item.Location = new Point(0, item.Height * i);
-                i++;
+                item.Location = new Point(ITEM_LOCATION_X, item.Height * i);
+               
                 this.Controls.Add(item);
+                i++;
             }
 
            

@@ -260,6 +260,7 @@ namespace ExhibitionApp
                 item.onItemClickEvent += Item_onItemClickEvent;
                 item.ImageFullName = img.FullName;
                 item.VideoFullName = videoPath + "\\" + img.Name.Replace(img.Extension, ".avi");
+                item.setDisplayName(img.Name.Replace(img.Extension, ""));
                 item.setPicture(img.FullName);
                 piclst.Add(item);
             }

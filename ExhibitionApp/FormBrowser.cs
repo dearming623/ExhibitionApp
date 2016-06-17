@@ -66,7 +66,7 @@ namespace ExhibitionApp
             // loadData();
             lst = MyAppSetting.GetInstance().GetCompanyLinks();
 
-            loc_x = 180;
+            loc_x = 10;
             if (lst != null && lst.Count >0)
             {
                 for (int i = 0; i < lst.Count; i++)
@@ -77,7 +77,7 @@ namespace ExhibitionApp
 
 
                     ImageButton btn = new ImageButton();
-                    
+
                     btn.Size = new Size(80, 80);
                     btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
                     btn.Click += Btn_Click;
@@ -101,7 +101,11 @@ namespace ExhibitionApp
                 if (item.GetType() == typeof(ImageButton))
                 {
                     ImageButton render = (ImageButton)item;
-                    render.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
+
+                    if (render.Name == "btn_menu")
+                        continue;
+                    
+                     render.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
                 }
                 
             }

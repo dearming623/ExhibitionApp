@@ -163,8 +163,13 @@ class AnimatorImage
         //}
         //ShowBmp(backgroundBmp);
 
-        dc.Clear(Color.FromKnownColor(KnownColor.ButtonFace)); // 置背景色
-        ShowBmp(); // 重绘所有区域
+        //重画原图
+        RectangleF destRect = new RectangleF(0, 0, backgroundBmp.Width, backgroundBmp.Height);
+        dc.DrawImage(backgroundBmp, destRect);
+       
+        //清楚图片
+        //dc.Clear(Color.FromKnownColor(KnownColor.ButtonFace)); // 置背景色
+        //ShowBmp(); // 重绘所有区域
 
 
     }

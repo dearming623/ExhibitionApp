@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace ExhibitionApp
 {
-    public partial class Setting : Form
+    public partial class Setting2 : Form
     {
-        public Setting()
+        public Setting2()
         {
             InitializeComponent();
         }

@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.lbl_video_name = new System.Windows.Forms.Label();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -43,7 +44,7 @@
             this.lblContent.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblContent.AutoSize = true;
             this.lblContent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContent.Location = new System.Drawing.Point(84, 82);
+            this.lblContent.Location = new System.Drawing.Point(84, 100);
             this.lblContent.Name = "lblContent";
             this.lblContent.Size = new System.Drawing.Size(53, 12);
             this.lblContent.TabIndex = 0;
@@ -57,7 +58,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-17, 85);
+            this.label1.Location = new System.Drawing.Point(-17, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(17, 12);
             this.label1.TabIndex = 1;
@@ -72,7 +73,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(317, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(0, 180);
+            this.mainPanel.Size = new System.Drawing.Size(0, 216);
             this.mainPanel.TabIndex = 1;
             this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MListItem_MouseDown);
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MListItem_MouseMove);
@@ -81,18 +82,31 @@
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
+            this.leftPanel.Controls.Add(this.lbl_video_name);
             this.leftPanel.Controls.Add(this.picBox);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(317, 180);
+            this.leftPanel.Size = new System.Drawing.Size(317, 216);
             this.leftPanel.TabIndex = 0;
+            // 
+            // lbl_video_name
+            // 
+            this.lbl_video_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.lbl_video_name.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_video_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_video_name.Location = new System.Drawing.Point(17, 171);
+            this.lbl_video_name.Name = "lbl_video_name";
+            this.lbl_video_name.Size = new System.Drawing.Size(284, 34);
+            this.lbl_video_name.TabIndex = 1;
+            this.lbl_video_name.Text = "Name";
+            this.lbl_video_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picBox
             // 
-            this.picBox.Location = new System.Drawing.Point(20, 13);
+            this.picBox.Location = new System.Drawing.Point(17, 13);
             this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(278, 156);
+            this.picBox.Size = new System.Drawing.Size(284, 158);
             this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
@@ -105,14 +119,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::ExhibitionApp.Properties.Resources.video_thumbnail;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.leftPanel);
             this.DoubleBuffered = true;
             this.Name = "MListItem";
-            this.Size = new System.Drawing.Size(316, 180);
+            this.Size = new System.Drawing.Size(316, 216);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MListItem_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MListItem_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MListItem_MouseUp);
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Label lbl_video_name;
     }
 }

@@ -199,4 +199,34 @@
   <data name="Navigation_Button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Navigation Button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="img1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="listbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\listbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="okDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\okDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="okNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\okNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyboard_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pic_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

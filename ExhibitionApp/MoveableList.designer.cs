@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "MoveableList";
-            this.Size = new System.Drawing.Size(399, 445);
+            this.Size = new System.Drawing.Size(368, 445);
             this.ResumeLayout(false);
 
         }

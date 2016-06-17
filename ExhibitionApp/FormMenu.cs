@@ -25,8 +25,8 @@ namespace ExhibitionApp
         public event onOptionClickEventHandler onOptionClickEvent;
 
 
-        private ConfirmPwd _ConfirmPwd = null;
-        private Setting _Setting = null;
+        private ConfirmPwd2 _ConfirmPwd = null;
+        private Setting2 _Setting = null;
         private FormBrowser _FormBrowser = null;
         private FormPlayPicture _FormPlayPicture = null;
         private FormPlayVideo _FormPlayVideo = null;
@@ -50,7 +50,7 @@ namespace ExhibitionApp
             }
             else
             {
-                _ConfirmPwd = new ConfirmPwd();
+                _ConfirmPwd = new ConfirmPwd2();
                
                 _ConfirmPwd.FormClosed += FormConfirmPwd_Closed;
                 //_ConfirmPwd.onConfirmPwdEvent += _ConfirmPwd_onConfirmPwdEvent;
@@ -79,7 +79,7 @@ namespace ExhibitionApp
             }
             else
             {
-                _Setting = new Setting();
+                _Setting = new Setting2();
                 _Setting.FormClosed += Form_Setting_Closed;
                 _Setting.Show();
             }
