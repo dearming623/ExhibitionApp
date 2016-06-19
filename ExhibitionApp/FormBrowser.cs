@@ -74,12 +74,11 @@ namespace ExhibitionApp
                     //Button btn = new Button();
                     //btn.BackgroundImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
                     //btn.AutoSize = true;
-
-
+                    
                     ImageButton btn = new ImageButton();
-
-                    btn.Size = new Size(80, 80);
-                    btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
+                    btn.setFlagForNavigation(true);
+                    btn.Size = new Size(160, 80);
+                    btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button21;
                     btn.Click += Btn_Click;
                     btn.Text = lst[i].websiteName;
                     btn.Tag = lst[i];
@@ -88,7 +87,7 @@ namespace ExhibitionApp
 
                     panel1.Controls.Add(btn);
 
-                    loc_x += btn.Width +1;
+                    loc_x += btn.Width ;
                 }
             }
         }
@@ -105,7 +104,7 @@ namespace ExhibitionApp
                     if (render.Name == "btn_menu")
                         continue;
                     
-                     render.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
+                     render.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button21;
                 }
                 
             }
@@ -122,7 +121,7 @@ namespace ExhibitionApp
             wb.Dock = DockStyle.Fill;
 
 
-            btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button1;
+            btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button11;
             this.panel2.Controls.Clear();
             this.panel2.Controls.Add(wb);
         }

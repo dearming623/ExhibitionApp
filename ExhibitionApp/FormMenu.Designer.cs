@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.btn_play_pic = new System.Windows.Forms.Button();
             this.btn_web_browser = new System.Windows.Forms.Button();
             this.btn_play_video = new System.Windows.Forms.Button();
@@ -231,6 +232,7 @@
             this.Controls.Add(this.btn_web_browser);
             this.Controls.Add(this.btn_play_pic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMenu";

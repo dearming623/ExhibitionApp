@@ -200,6 +200,7 @@ namespace System.Windows.Forms
         }
 
         private bool holdingSpace = false;
+        private bool isForNavigation = false;
 
         public override bool PreProcessMessage(ref Message msg)
         {
@@ -254,10 +255,26 @@ namespace System.Windows.Forms
                 SizeF drawStringSize = pe.Graphics.MeasureString(base.Text, base.Font);
                 PointF drawPoint;
                 if (base.Image != null)
-                    drawPoint = new PointF(base.Image.Width / 2 - drawStringSize.Width / 2, base.Image.Height / 2 - drawStringSize.Height / 2);
+                    if (isForNavigation)
+                    {
+                        drawPoint = new PointF(26, base.Image.Height / 2 - drawStringSize.Height / 2);
+                    }else
+                    {
+                        drawPoint = new PointF(base.Image.Width / 2 - drawStringSize.Width / 2, base.Image.Height / 2 - drawStringSize.Height / 2);
+                    }
                 else
                     drawPoint = new PointF(base.Width / 2 - drawStringSize.Width / 2, base.Height / 2 - drawStringSize.Height / 2);
-                pe.Graphics.DrawString(base.Text, base.Font, drawBrush, drawPoint);
+
+                if (isForNavigation)
+                {
+                    Font newFont = new Font("ºÚÌå", 13);
+                    pe.Graphics.DrawString(base.Text, newFont, drawBrush, drawPoint);
+                }
+                else
+                {
+                    pe.Graphics.DrawString(base.Text, base.Font, drawBrush, drawPoint);
+                }
+              
             }
         }
 
@@ -267,5 +284,10 @@ namespace System.Windows.Forms
             base.OnTextChanged(e);
         }
         #endregion
+
+        public void setFlagForNavigation(bool v)
+        {
+            isForNavigation = v;
+        }
     }
 }

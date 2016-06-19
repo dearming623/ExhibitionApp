@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVideoSelection));
             this.pnlThumb = new System.Windows.Forms.Panel();
+            this.btn_play_video = new System.Windows.Forms.ImageButton();
+            this.picImageSlide = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picImageSlide = new System.Windows.Forms.PictureBox();
             this.imageButton1 = new System.Windows.Forms.ImageButton();
             this.moveableList1 = new MoveableListLib.MoveableList();
-            this.btn_play_video = new System.Windows.Forms.ImageButton();
             this.pnlThumb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_play_video)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageSlide)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_play_video)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlThumb
@@ -56,6 +57,32 @@
             this.pnlThumb.Name = "pnlThumb";
             this.pnlThumb.Size = new System.Drawing.Size(821, 642);
             this.pnlThumb.TabIndex = 2;
+            // 
+            // btn_play_video
+            // 
+            this.btn_play_video.BackColor = System.Drawing.Color.Transparent;
+            this.btn_play_video.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_play_video.DownImage = global::ExhibitionApp.Properties.Resources.playDown;
+            this.btn_play_video.HoverImage = null;
+            this.btn_play_video.Location = new System.Drawing.Point(347, 295);
+            this.btn_play_video.Name = "btn_play_video";
+            this.btn_play_video.NormalImage = global::ExhibitionApp.Properties.Resources.playNormal;
+            this.btn_play_video.Size = new System.Drawing.Size(100, 100);
+            this.btn_play_video.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_play_video.TabIndex = 9;
+            this.btn_play_video.TabStop = false;
+            this.btn_play_video.Click += new System.EventHandler(this.Pb_play_Click);
+            // 
+            // picImageSlide
+            // 
+            this.picImageSlide.BackColor = System.Drawing.SystemColors.Control;
+            this.picImageSlide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picImageSlide.Location = new System.Drawing.Point(0, 0);
+            this.picImageSlide.Name = "picImageSlide";
+            this.picImageSlide.Size = new System.Drawing.Size(821, 642);
+            this.picImageSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImageSlide.TabIndex = 0;
+            this.picImageSlide.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -85,17 +112,6 @@
             this.panel1.Size = new System.Drawing.Size(303, 49);
             this.panel1.TabIndex = 0;
             // 
-            // picImageSlide
-            // 
-            this.picImageSlide.BackColor = System.Drawing.SystemColors.Control;
-            this.picImageSlide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picImageSlide.Location = new System.Drawing.Point(0, 0);
-            this.picImageSlide.Name = "picImageSlide";
-            this.picImageSlide.Size = new System.Drawing.Size(821, 642);
-            this.picImageSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImageSlide.TabIndex = 0;
-            this.picImageSlide.TabStop = false;
-            // 
             // imageButton1
             // 
             this.imageButton1.BackColor = System.Drawing.Color.Transparent;
@@ -120,21 +136,6 @@
             this.moveableList1.Size = new System.Drawing.Size(309, 581);
             this.moveableList1.TabIndex = 0;
             // 
-            // btn_play_video
-            // 
-            this.btn_play_video.BackColor = System.Drawing.Color.Transparent;
-            this.btn_play_video.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_play_video.DownImage = global::ExhibitionApp.Properties.Resources.playDown;
-            this.btn_play_video.HoverImage = null;
-            this.btn_play_video.Location = new System.Drawing.Point(347, 295);
-            this.btn_play_video.Name = "btn_play_video";
-            this.btn_play_video.NormalImage = global::ExhibitionApp.Properties.Resources.playNormal;
-            this.btn_play_video.Size = new System.Drawing.Size(100, 100);
-            this.btn_play_video.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btn_play_video.TabIndex = 9;
-            this.btn_play_video.TabStop = false;
-            this.btn_play_video.Click += new System.EventHandler(this.Pb_play_Click);
-            // 
             // FormVideoSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -145,6 +146,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pnlThumb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVideoSelection";
@@ -154,12 +156,12 @@
             this.Load += new System.EventHandler(this.FormVideoSelection_Load);
             this.pnlThumb.ResumeLayout(false);
             this.pnlThumb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_play_video)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageSlide)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_play_video)).EndInit();
             this.ResumeLayout(false);
 
         }

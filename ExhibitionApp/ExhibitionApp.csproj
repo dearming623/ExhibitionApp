@@ -54,6 +54,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_32px.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
@@ -414,6 +417,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\keyboard_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_32px.ico" />
+    <None Include="Resources\NavigationBG.png" />
+    <None Include="Resources\Navigation_Button21.png" />
+    <None Include="Resources\Navigation_Button11.png" />
+    <None Include="Resources\Navigation_Button2.png" />
+    <None Include="Resources\Navigation_Button1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

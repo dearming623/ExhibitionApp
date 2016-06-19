@@ -263,9 +263,39 @@ namespace ExhibitionApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Navigation_Button11 {
+            get {
+                object obj = ResourceManager.GetObject("Navigation_Button11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Navigation_Button2 {
             get {
                 object obj = ResourceManager.GetObject("Navigation_Button2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Navigation_Button21 {
+            get {
+                object obj = ResourceManager.GetObject("Navigation_Button21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NavigationBG {
+            get {
+                object obj = ResourceManager.GetObject("NavigationBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -229,4 +229,13 @@
   <data name="pic_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Navigation_Button11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Navigation_Button11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Navigation_Button21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Navigation_Button21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavigationBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavigationBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
