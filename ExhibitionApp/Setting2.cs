@@ -17,6 +17,7 @@ namespace ExhibitionApp
 
 
         private ChangePwd2 _changePwd = null;
+        string namekey = "";
 
         private void Setting_Load(object sender, EventArgs e)
         {
@@ -103,7 +104,7 @@ namespace ExhibitionApp
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+             namekey = dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
             tb_btn_name.Text = dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
             tb_link.Text = dataGridView1.Rows[e.RowIndex].Cells["link"].Value.ToString();
 
@@ -188,11 +189,12 @@ namespace ExhibitionApp
 
             try
             {
-                affected = SQLiteDBHelper.ExecuteSql("update t_company_link set name = '" + tb_btn_name.Text + "',link =  '" + tb_link.Text + "' where name = '" + tb_btn_name.Text + "' "); 
+                affected = SQLiteDBHelper.ExecuteSql("update t_company_link set name = '" + tb_btn_name.Text + "',link =  '" + tb_link.Text + "' where name = '" + namekey + "' "); 
 
             }
             catch (Exception ex)
             {
+                ex.ToString();
             }
 
             if (affected == 0)

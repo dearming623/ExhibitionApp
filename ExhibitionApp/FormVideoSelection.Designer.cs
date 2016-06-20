@@ -129,11 +129,12 @@
             // 
             // moveableList1
             // 
+            this.moveableList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.moveableList1.BackColor = System.Drawing.Color.Transparent;
             this.moveableList1.Location = new System.Drawing.Point(0, 55);
             this.moveableList1.Margin = new System.Windows.Forms.Padding(0);
             this.moveableList1.Name = "moveableList1";
-            this.moveableList1.Size = new System.Drawing.Size(309, 581);
+            this.moveableList1.Size = new System.Drawing.Size(309, 587);
             this.moveableList1.TabIndex = 0;
             // 
             // FormVideoSelection

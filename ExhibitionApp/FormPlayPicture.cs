@@ -109,8 +109,9 @@ namespace ExhibitionApp
         {
             if (ias != null)
             {
+               
                 // 将动画类中的内存输出位图绘制到DC上
-                e.Graphics.DrawImage(ias.OutBmp, e.ClipRectangle, e.ClipRectangle, GraphicsUnit.Pixel);
+                e.Graphics.DrawImage(ias.OutBmp, e.ClipRectangle, e.ClipRectangle, GraphicsUnit.Pixel); // Ming发现这里经常有异常
             }
            
         }

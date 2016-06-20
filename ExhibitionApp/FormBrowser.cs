@@ -1,10 +1,13 @@
-﻿using CefSharp.WinForms;
+﻿using CefSharp;
+using CefSharp.WinForms;
+using CefSharp.WinForms.Internals;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ExhibitionApp
@@ -50,10 +53,47 @@ namespace ExhibitionApp
             //设置停靠方式
             wb.Dock = DockStyle.Fill;
 
+           
+
             //加入到当前窗体中
             //this.Controls.Add(wb);
             this.panel2.Controls.Add(wb);
+
+            
         }
+
+
+        class MyLifeSpanHandler : ILifeSpanHandler
+        {
+        
+            public bool OnBeforePopup(IWebBrowser browserControl, IBrowser browser, IFrame frame, string targetUrl, string targetFrameName, WindowOpenDisposition targetDisposition, bool userGesture, IPopupFeatures popupFeatures, IWindowInfo windowInfo, IBrowserSettings browserSettings, ref bool noJavascriptAccess, out IWebBrowser newBrowser)
+            {
+                // Preserve new windows to be opened and load all popup urls in the same browser view
+                browserControl.Load(targetUrl);
+
+                newBrowser = browserControl;
+                //
+                return true;
+            }
+
+            public void OnAfterCreated(IWebBrowser browserControl, IBrowser browser)
+            {
+                //throw new NotImplementedException();
+            }
+
+            public bool DoClose(IWebBrowser browserControl, IBrowser browser)
+            {
+                //throw new NotImplementedException();
+                return true;
+            }
+
+            public void OnBeforeClose(IWebBrowser browserControl, IBrowser browser)
+            {
+                //throw new NotImplementedException();
+            }
+        }
+
+         
 
         private List<MyLink> lst = null;
         private int loc_x = 180;
@@ -75,22 +115,34 @@ namespace ExhibitionApp
                     //btn.BackgroundImage = ExhibitionApp.Properties.Resources.Navigation_Button2;
                     //btn.AutoSize = true;
                     
-                    ImageButton btn = new ImageButton();
-                    btn.setFlagForNavigation(true);
-                    btn.Size = new Size(160, 80);
-                    btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button21;
-                    btn.Click += Btn_Click;
-                    btn.Text = lst[i].websiteName;
-                    btn.Tag = lst[i];
+                    ImageButton btn_item = new ImageButton();
+                    btn_item.setFlagForNavigation(true);
+                    btn_item.Size = new Size(160, 80);
+                    btn_item.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button21;
+                    btn_item.Click += Btn_Click;
+                    btn_item.Text = lst[i].websiteName;
+                    btn_item.Tag = lst[i];
 
-                    btn.Location = new Point(loc_x,loc_y);
+                    btn_item.Location = new Point(loc_x,loc_y);
 
-                    panel1.Controls.Add(btn);
+                    panel1.Controls.Add(btn_item);
 
-                    loc_x += btn.Width ;
+                    loc_x += btn_item.Width ;
+
+                    if (i == 0)
+                    {
+                        wb = new ChromiumWebBrowser(lst[i].url);
+                        wb.Dock = DockStyle.Fill;
+
+                        btn_item.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button11;
+                        this.panel2.Controls.Clear();
+                        this.panel2.Controls.Add(wb);
+                    }
                 }
+                
             }
         }
+
 
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -101,7 +153,10 @@ namespace ExhibitionApp
                 {
                     ImageButton render = (ImageButton)item;
 
-                    if (render.Name == "btn_menu")
+                  
+                    if (render.Name == "btn_menu" || 
+                        render.Name == "btn_go_forward" || 
+                        render.Name == "btn_go_back")
                         continue;
                     
                      render.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button21;
@@ -120,31 +175,26 @@ namespace ExhibitionApp
             wb = new ChromiumWebBrowser(link.url);
             wb.Dock = DockStyle.Fill;
 
-
+            wb.LifeSpanHandler = new MyLifeSpanHandler();
             btn.NormalImage = ExhibitionApp.Properties.Resources.Navigation_Button11;
             this.panel2.Controls.Clear();
             this.panel2.Controls.Add(wb);
         }
 
-        private void loadData()
+        private void onClickGoBack(object sender, EventArgs e)
         {
-            if (lst == null)
+            if (wb!= null && wb.CanGoBack)
             {
-                lst = new List<MyLink>();
+                wb.GetBrowser().GoBack();
             }
-
-            lst.Clear();
-
-            for (int i = 0; i < 5; i++)
-            {
-                MyLink link = new MyLink();
-                link.websiteName = " website -> " + i;
-                link.url = "www.baidu.com";
-
-                lst.Add(link);
-            }
-           
         }
 
+        private void onClickGoForward(object sender, EventArgs e)
+        {
+            if (wb != null && wb.CanGoForward)
+            {
+                wb.GetBrowser().GoForward();
+            }
+        }
     }
 }

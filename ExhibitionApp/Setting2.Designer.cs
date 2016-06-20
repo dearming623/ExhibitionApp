@@ -43,9 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_add_record = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
@@ -63,6 +60,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.ImageButton();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,11 +74,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(160, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 27);
+            this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "将于每天的";
             // 
@@ -86,11 +86,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(160, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 29);
+            this.label2.Size = new System.Drawing.Size(202, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "幻灯图片文件路径";
             // 
@@ -98,49 +98,49 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(160, 316);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 29);
+            this.label3.Size = new System.Drawing.Size(160, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "视频文件路径";
             // 
             // tb_slide_path
             // 
-            this.tb_slide_path.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_slide_path.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_slide_path.Location = new System.Drawing.Point(160, 200);
             this.tb_slide_path.Name = "tb_slide_path";
-            this.tb_slide_path.Size = new System.Drawing.Size(662, 41);
+            this.tb_slide_path.Size = new System.Drawing.Size(662, 35);
             this.tb_slide_path.TabIndex = 3;
             // 
             // tb_video_path
             // 
-            this.tb_video_path.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_video_path.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_video_path.Location = new System.Drawing.Point(160, 351);
             this.tb_video_path.Name = "tb_video_path";
-            this.tb_video_path.Size = new System.Drawing.Size(662, 41);
+            this.tb_video_path.Size = new System.Drawing.Size(662, 35);
             this.tb_video_path.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 29);
+            this.label4.Size = new System.Drawing.Size(118, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "文件管理:";
             // 
             // btn_save_slide_path
             // 
             this.btn_save_slide_path.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_save_slide_path.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_save_slide_path.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_slide_path.Location = new System.Drawing.Point(160, 249);
             this.btn_save_slide_path.Name = "btn_save_slide_path";
-            this.btn_save_slide_path.Size = new System.Drawing.Size(173, 50);
+            this.btn_save_slide_path.Size = new System.Drawing.Size(143, 50);
             this.btn_save_slide_path.TabIndex = 6;
             this.btn_save_slide_path.Text = "更改目录";
             this.btn_save_slide_path.UseVisualStyleBackColor = false;
@@ -148,10 +148,10 @@
             // 
             // btn_save_video_path
             // 
-            this.btn_save_video_path.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_save_video_path.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_video_path.Location = new System.Drawing.Point(160, 399);
             this.btn_save_video_path.Name = "btn_save_video_path";
-            this.btn_save_video_path.Size = new System.Drawing.Size(173, 50);
+            this.btn_save_video_path.Size = new System.Drawing.Size(143, 50);
             this.btn_save_video_path.TabIndex = 7;
             this.btn_save_video_path.Text = "更改目录";
             this.btn_save_video_path.UseVisualStyleBackColor = true;
@@ -181,11 +181,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(396, 69);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 27);
+            this.label5.Size = new System.Drawing.Size(34, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "时";
             // 
@@ -193,11 +193,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(506, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 27);
+            this.label6.Size = new System.Drawing.Size(34, 24);
             this.label6.TabIndex = 11;
             this.label6.Text = "分";
             // 
@@ -225,11 +225,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(546, 69);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 27);
+            this.label7.Size = new System.Drawing.Size(58, 24);
             this.label7.TabIndex = 12;
             this.label7.Text = "关机";
             // 
@@ -237,11 +237,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(12, 69);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 27);
+            this.label8.Size = new System.Drawing.Size(118, 24);
             this.label8.TabIndex = 13;
             this.label8.Text = "定时任务:";
             // 
@@ -263,54 +263,29 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(459, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(647, 181);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "按钮名称";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // link
-            // 
-            this.link.DataPropertyName = "link";
-            this.link.HeaderText = "对应触发连接";
-            this.link.Name = "link";
-            this.link.ReadOnly = true;
-            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.link.Width = 280;
-            // 
-            // del
-            // 
-            this.del.HeaderText = "操作";
-            this.del.Name = "del";
-            this.del.Text = "删除";
-            this.del.UseColumnTextForButtonValue = true;
-            this.del.Width = 60;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(9, 470);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(153, 29);
+            this.label9.Size = new System.Drawing.Size(123, 24);
             this.label9.TabIndex = 15;
             this.label9.Text = "链接设置:";
             // 
             // btn_add_record
             // 
-            this.btn_add_record.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_add_record.Location = new System.Drawing.Point(649, 515);
+            this.btn_add_record.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_record.Location = new System.Drawing.Point(1, 664);
             this.btn_add_record.Name = "btn_add_record";
-            this.btn_add_record.Size = new System.Drawing.Size(173, 50);
+            this.btn_add_record.Size = new System.Drawing.Size(143, 50);
             this.btn_add_record.TabIndex = 16;
             this.btn_add_record.Text = "增加记录";
             this.btn_add_record.UseVisualStyleBackColor = true;
@@ -353,10 +328,10 @@
             // 
             // btn_save_record
             // 
-            this.btn_save_record.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_save_record.Location = new System.Drawing.Point(649, 576);
+            this.btn_save_record.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_record.Location = new System.Drawing.Point(1, 608);
             this.btn_save_record.Name = "btn_save_record";
-            this.btn_save_record.Size = new System.Drawing.Size(173, 50);
+            this.btn_save_record.Size = new System.Drawing.Size(143, 50);
             this.btn_save_record.TabIndex = 17;
             this.btn_save_record.Text = "保存记录";
             this.btn_save_record.UseVisualStyleBackColor = true;
@@ -366,40 +341,40 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(170, 711);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 29);
+            this.label12.Size = new System.Drawing.Size(110, 24);
             this.label12.TabIndex = 21;
             this.label12.Text = "按钮名字";
             // 
             // tb_btn_name
             // 
-            this.tb_btn_name.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_btn_name.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_btn_name.Location = new System.Drawing.Point(308, 708);
             this.tb_btn_name.Name = "tb_btn_name";
-            this.tb_btn_name.Size = new System.Drawing.Size(326, 41);
+            this.tb_btn_name.Size = new System.Drawing.Size(251, 35);
             this.tb_btn_name.TabIndex = 22;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(170, 758);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 29);
+            this.label13.Size = new System.Drawing.Size(110, 24);
             this.label13.TabIndex = 23;
             this.label13.Text = "网络链接";
             // 
             // tb_link
             // 
-            this.tb_link.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_link.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_link.Location = new System.Drawing.Point(308, 755);
             this.tb_link.Name = "tb_link";
-            this.tb_link.Size = new System.Drawing.Size(514, 41);
+            this.tb_link.Size = new System.Drawing.Size(514, 35);
             this.tb_link.TabIndex = 24;
             // 
             // cb_start_run
@@ -421,11 +396,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(160, 119);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(292, 29);
+            this.label14.Size = new System.Drawing.Size(226, 24);
             this.label14.TabIndex = 26;
             this.label14.Text = "程序启动时首先打开";
             // 
@@ -444,7 +419,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Font = new System.Drawing.Font("SimHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(163, 470);
             this.groupBox1.Name = "groupBox1";
@@ -481,6 +456,32 @@
             this.btn_close.TabStop = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "按钮名称";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.name.Width = 130;
+            // 
+            // link
+            // 
+            this.link.DataPropertyName = "link";
+            this.link.HeaderText = "对应触发连接";
+            this.link.Name = "link";
+            this.link.ReadOnly = true;
+            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.link.Width = 436;
+            // 
+            // del
+            // 
+            this.del.HeaderText = "操作";
+            this.del.Name = "del";
+            this.del.Text = "删除";
+            this.del.UseColumnTextForButtonValue = true;
+            this.del.Width = 60;
+            // 
             // Setting2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -490,9 +491,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(867, 780);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_add_record);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.btn_add_record);
             this.Controls.Add(this.btn_save_record);
             this.Controls.Add(this.pb_popup_softkeyboard);
             this.Controls.Add(this.label14);
@@ -566,14 +567,14 @@
         private System.Windows.Forms.TextBox tb_btn_name;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tb_link;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn link;
-        private System.Windows.Forms.DataGridViewButtonColumn del;
         private System.Windows.Forms.ComboBox cb_start_run;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pb_popup_softkeyboard;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ImageButton btn_close;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn link;
+        private System.Windows.Forms.DataGridViewButtonColumn del;
     }
 }
