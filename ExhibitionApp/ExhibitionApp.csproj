@@ -420,6 +420,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_32px.ico" />
+    <None Include="Resources\arrow_back_32px.png" />
+    <None Include="Resources\arrow_forward_32px.png" />
     <None Include="Resources\btn_blue_closeNormal.png" />
     <None Include="Resources\btn_blue_closeDown.png" />
     <None Include="Resources\NavigationBG.png" />

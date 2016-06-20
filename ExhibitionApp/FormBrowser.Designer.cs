@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBrowser));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_go_forward = new System.Windows.Forms.ImageButton();
             this.btn_go_back = new System.Windows.Forms.ImageButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_menu = new System.Windows.Forms.ImageButton();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_go_forward)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_go_back)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,36 +47,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(894, 547);
             this.panel2.TabIndex = 1;
-            // 
-            // btn_go_forward
-            // 
-            this.btn_go_forward.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_go_forward.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_go_forward.DownImage = null;
-            this.btn_go_forward.HoverImage = null;
-            this.btn_go_forward.Location = new System.Drawing.Point(794, 3);
-            this.btn_go_forward.Name = "btn_go_forward";
-            this.btn_go_forward.NormalImage = null;
-            this.btn_go_forward.Size = new System.Drawing.Size(49, 40);
-            this.btn_go_forward.TabIndex = 1;
-            this.btn_go_forward.TabStop = false;
-            this.btn_go_forward.Text = "imageButton2";
-            this.btn_go_forward.Click += new System.EventHandler(this.onClickGoForward);
-            // 
-            // btn_go_back
-            // 
-            this.btn_go_back.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_go_back.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_go_back.DownImage = null;
-            this.btn_go_back.HoverImage = null;
-            this.btn_go_back.Location = new System.Drawing.Point(741, 3);
-            this.btn_go_back.Name = "btn_go_back";
-            this.btn_go_back.NormalImage = null;
-            this.btn_go_back.Size = new System.Drawing.Size(47, 40);
-            this.btn_go_back.TabIndex = 0;
-            this.btn_go_back.TabStop = false;
-            this.btn_go_back.Text = "imageButton1";
-            this.btn_go_back.Click += new System.EventHandler(this.onClickGoBack);
             // 
             // panel1
             // 
@@ -91,6 +61,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 41);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_go_forward
+            // 
+            this.btn_go_forward.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_go_forward.BackColor = System.Drawing.Color.Transparent;
+            this.btn_go_forward.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_go_forward.DownImage = null;
+            this.btn_go_forward.HoverImage = global::ExhibitionApp.Properties.Resources.arrow_forward_32px;
+            this.btn_go_forward.Location = new System.Drawing.Point(803, 6);
+            this.btn_go_forward.Name = "btn_go_forward";
+            this.btn_go_forward.NormalImage = global::ExhibitionApp.Properties.Resources.arrow_forward_32px;
+            this.btn_go_forward.Size = new System.Drawing.Size(32, 32);
+            this.btn_go_forward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_go_forward.TabIndex = 1;
+            this.btn_go_forward.TabStop = false;
+            this.btn_go_forward.Click += new System.EventHandler(this.onClickGoForward);
+            // 
+            // btn_go_back
+            // 
+            this.btn_go_back.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_go_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_go_back.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_go_back.DownImage = null;
+            this.btn_go_back.HoverImage = global::ExhibitionApp.Properties.Resources.arrow_back_32px;
+            this.btn_go_back.Location = new System.Drawing.Point(765, 6);
+            this.btn_go_back.Name = "btn_go_back";
+            this.btn_go_back.NormalImage = global::ExhibitionApp.Properties.Resources.arrow_back_32px;
+            this.btn_go_back.Size = new System.Drawing.Size(32, 32);
+            this.btn_go_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_go_back.TabIndex = 0;
+            this.btn_go_back.TabStop = false;
+            this.btn_go_back.Click += new System.EventHandler(this.onClickGoBack);
             // 
             // btn_menu
             // 
@@ -126,10 +128,10 @@
             this.Text = "Form Browser";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormBrowser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_go_forward)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_go_back)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_go_forward)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_go_back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
             this.ResumeLayout(false);
 
