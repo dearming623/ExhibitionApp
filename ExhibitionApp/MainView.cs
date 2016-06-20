@@ -47,7 +47,9 @@ namespace ExhibitionApp
         {
             if (menu != null)
             {
-                menu.Activate();
+
+                //  menu.Activate();
+                menu.Close();
             }
             else
             {

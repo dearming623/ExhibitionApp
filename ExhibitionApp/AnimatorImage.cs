@@ -350,7 +350,7 @@ class AnimatorImage
                 break;
         }
 
-        //threadMethod =  Animator06; // for test
+        //threadMethod = Animator21; // for test
 
         Thread drawThread = new Thread(threadMethod);
         drawThread.IsBackground = true; // 设为后台线程，避免该线程未结束时退出主线程而引发异常
@@ -440,7 +440,7 @@ class AnimatorImage
 
     #region 中心闭幕（改进版）
 
-    Bitmap backgroundBmp = null;
+    Bitmap backgroundBmp = ExhibitionApp.Properties.Resources.pic_bg;
     // 原理：由大到小生成图像中心区域，然后用总区域减去该中心区域，并用材质画刷填充
     private void Animator03()
     {
@@ -1339,7 +1339,7 @@ class AnimatorImage
 
             for (float angle = anglePer; angle <= 360 * roundCount; angle += anglePer) // 每次旋转若干度度，同时进行缩放
             {
-                dc.Clear(Color.FromKnownColor(KnownColor.ButtonFace)); // 清空DC的内容
+               // dc.Clear(Color.FromKnownColor(KnownColor.ButtonFace)); // 清空DC的内容
                 dc.TranslateTransform(bmp.Width / 2, bmp.Height / 2); // 平移坐标轴，以进行基于图片中心的旋转
                 dc.RotateTransform(angle); // 旋转坐标轴
                 dc.ScaleTransform(angle / 360 / roundCount, angle / 360 / roundCount); // 缩放

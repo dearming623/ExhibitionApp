@@ -161,14 +161,19 @@ namespace ExhibitionApp
            
         }
 
+        int currentIdx = 0;
+
         private void PlayPictures()
         {
             if (!picIsPlaying)
             {
+                if (currentIdx >= lst2.Count)
+                    currentIdx = 0;
+
                 Random ran = new Random();
-                int RandKey = ran.Next(0, lst2.Count);
+               // int RandKey = ran.Next(0, lst2.Count);
                 int type = ran.Next(1, 29);
-                ias = lst2[RandKey];
+                ias = lst2[currentIdx];
 
                 ias.DrawStarted += Ias_DrawStarted;
                 ias.DrawCompleted += Ias_DrawCompleted;
@@ -183,7 +188,10 @@ namespace ExhibitionApp
                 {
                     ias.DrawAnimator(animatorType, oldBmp);
                 }
-               
+
+                currentIdx++;
+
+
             }
         }
 
