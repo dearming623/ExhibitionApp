@@ -83,6 +83,26 @@ namespace ExhibitionApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_blue_closeDown {
+            get {
+                object obj = ResourceManager.GetObject("btn_blue_closeDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_blue_closeNormal {
+            get {
+                object obj = ResourceManager.GetObject("btn_blue_closeNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_48px {
             get {
                 object obj = ResourceManager.GetObject("Close_48px", resourceCulture);

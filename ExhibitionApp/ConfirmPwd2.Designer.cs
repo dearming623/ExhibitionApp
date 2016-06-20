@@ -57,7 +57,6 @@
             this.tb_pwd.Name = "tb_pwd";
             this.tb_pwd.Size = new System.Drawing.Size(339, 41);
             this.tb_pwd.TabIndex = 1;
-            this.tb_pwd.Text = "8888";
             this.tb_pwd.UseSystemPasswordChar = true;
             // 
             // pb_popup_softkeyboard
