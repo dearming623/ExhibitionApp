@@ -420,6 +420,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_32px.ico" />
+    <None Include="Resources\arrowforwardDown.png" />
+    <None Include="Resources\arrowbackNormal.png" />
+    <None Include="Resources\arrowbackDown.png" />
+    <None Include="Resources\arrowforwardNormal.png" />
     <None Include="Resources\arrow_back_32px.png" />
     <None Include="Resources\arrow_forward_32px.png" />
     <None Include="Resources\btn_blue_closeNormal.png" />

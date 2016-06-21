@@ -350,7 +350,7 @@ class AnimatorImage
                 break;
         }
 
-        //threadMethod = Animator21; // for test
+       // threadMethod = Animator15; // for test
 
         Thread drawThread = new Thread(threadMethod);
         drawThread.IsBackground = true; // 设为后台线程，避免该线程未结束时退出主线程而引发异常
