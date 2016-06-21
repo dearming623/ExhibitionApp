@@ -267,7 +267,7 @@ namespace System.Windows.Forms
 
                 if (isForNavigation)
                 {
-                    Font newFont = new Font("ºÚÌå", 13);
+                    Font newFont = new Font("ºÚÌå", 11);
                     pe.Graphics.DrawString(base.Text, newFont, drawBrush, drawPoint);
                 }
                 else
