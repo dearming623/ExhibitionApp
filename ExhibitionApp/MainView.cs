@@ -84,7 +84,11 @@ namespace ExhibitionApp
 
         private void Menu_onOptionClickEvent(int option)
         {
+            
             CloseMenuView();
+
+            if (current_option == option)
+                return;
 
             CloseCurrentView(current_option);
 

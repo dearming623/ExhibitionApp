@@ -141,6 +141,9 @@ namespace ExhibitionApp
                 }
                 
             }
+
+            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
 

@@ -87,6 +87,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SlideProjector.cs" />
     <Compile Include="AnimatorImage.cs" />
     <Compile Include="ChangePwd2.cs">
       <SubType>Form</SubType>

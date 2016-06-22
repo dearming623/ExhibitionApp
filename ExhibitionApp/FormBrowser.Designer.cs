@@ -47,6 +47,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(894, 547);
             this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
             // 
             // panel1
             // 
@@ -61,6 +62,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 41);
             this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
             // 
             // btn_go_forward
             // 
@@ -115,6 +117,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::ExhibitionApp.Properties.Resources.pic_bg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 588);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
