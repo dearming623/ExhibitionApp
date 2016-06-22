@@ -17,6 +17,8 @@ namespace ExhibitionApp
         // private FormPlayVideo _FormPlayVideo = null;
         private FormVideoSelection _FormPlayVideo = null;
 
+        private WaitForm waitForm = null;// new WaitForm();
+
         private System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
 
         public  MainView()
@@ -90,9 +92,7 @@ namespace ExhibitionApp
             if (current_option == option)
                 return;
 
-            CloseCurrentView(current_option);
-
-            current_option = option;
+          //  showWaitingDialog();
 
             switch (option)
             {
@@ -113,6 +113,13 @@ namespace ExhibitionApp
 
                     break;
             }
+
+            CloseCurrentView(current_option);
+
+            current_option = option;
+
+
+            // hideWaitingDialog();
         }
 
         private void Menu_FormClosed(object sender, FormClosedEventArgs e)
@@ -127,6 +134,30 @@ namespace ExhibitionApp
                 menu.Close();
                 //menu.Hide();
             }
+        }
+
+        private void showWaitingDialog()
+        {
+            if (waitForm != null)
+            {
+                waitForm.Activate();
+            }
+            else
+            {
+                waitForm = new WaitForm();
+                waitForm.Show();
+            }
+
+        }
+
+        private void hideWaitingDialog()
+        {
+
+            if (waitForm != null)
+            {
+                waitForm.Hide();
+            }
+
         }
 
         private void OpenPlayPicView()

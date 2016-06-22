@@ -23,7 +23,11 @@ namespace ExhibitionApp
 
         private void FormVideoSelection_Load(object sender, EventArgs e)
         {
-           // loadImage();
+            // loadImage();
+
+            btn_play_video.Location = new Point((pnlThumb.Width - btn_play_video.Width) / 2, (pnlThumb.Height - btn_play_video.Height) / 2);
+            btn_play_video.BringToFront();
+
 
             LoadImages();
 
@@ -37,16 +41,19 @@ namespace ExhibitionApp
             //pnlThumb.Controls.Add(pb_play);
             //pb_play.BringToFront();
 
-            btn_play_video.Location = new Point((pnlThumb.Width - btn_play_video.Width) / 2, (pnlThumb.Height - btn_play_video.Height) / 2);
-            btn_play_video.BringToFront();
+          
         }
 
         private void Pb_play_Click(object sender, EventArgs e)
         {
-            FormPlayVideo playvideo = new FormPlayVideo();
-            playvideo.Show();
-            // playvideo.play("d:\\CYON_15s.avi");
-            playvideo.play(CurrentItem.VideoFullName);
+            if (CurrentItem != null)
+            {
+                FormPlayVideo playvideo = new FormPlayVideo();
+                playvideo.Show();
+                // playvideo.play("d:\\CYON_15s.avi");
+                playvideo.play(CurrentItem.VideoFullName);
+            }
+         
         }
 
         private void loadImage()

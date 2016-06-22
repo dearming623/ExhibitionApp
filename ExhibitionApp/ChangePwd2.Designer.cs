@@ -120,8 +120,8 @@
             // 
             this.btn_confirm.BackColor = System.Drawing.Color.Transparent;
             this.btn_confirm.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_confirm.DownImage = null;
-            this.btn_confirm.HoverImage = global::ExhibitionApp.Properties.Resources.okDown;
+            this.btn_confirm.DownImage = global::ExhibitionApp.Properties.Resources.okDown;
+            this.btn_confirm.HoverImage = null;
             this.btn_confirm.Location = new System.Drawing.Point(59, 353);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.NormalImage = global::ExhibitionApp.Properties.Resources.okNormal;

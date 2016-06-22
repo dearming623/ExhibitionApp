@@ -195,6 +195,12 @@
     </Compile>
     <Compile Include="SQLiteDBHelper.cs" />
     <Compile Include="SystemController.cs" />
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChangePwd2.resx">
       <DependentUpon>ChangePwd2.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="local.db">

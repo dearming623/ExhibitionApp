@@ -49,6 +49,7 @@
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "状态";
+            this.label1.Visible = false;
             // 
             // panel1
             // 
@@ -84,6 +85,7 @@
             this.currentStateLabel.Size = new System.Drawing.Size(29, 12);
             this.currentStateLabel.TabIndex = 3;
             this.currentStateLabel.Text = "Wait";
+            this.currentStateLabel.Visible = false;
             // 
             // button1
             // 

@@ -124,8 +124,8 @@
             // 
             this.imageButton6.BackColor = System.Drawing.Color.Transparent;
             this.imageButton6.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton6.DownImage = null;
-            this.imageButton6.HoverImage = global::ExhibitionApp.Properties.Resources.backDown;
+            this.imageButton6.DownImage = global::ExhibitionApp.Properties.Resources.backDown;
+            this.imageButton6.HoverImage = null;
             this.imageButton6.Location = new System.Drawing.Point(326, 172);
             this.imageButton6.Name = "imageButton6";
             this.imageButton6.NormalImage = global::ExhibitionApp.Properties.Resources.backNormal;
@@ -139,8 +139,8 @@
             // 
             this.imageButton5.BackColor = System.Drawing.Color.Transparent;
             this.imageButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton5.DownImage = null;
-            this.imageButton5.HoverImage = global::ExhibitionApp.Properties.Resources.settingDown;
+            this.imageButton5.DownImage = global::ExhibitionApp.Properties.Resources.settingDown;
+            this.imageButton5.HoverImage = null;
             this.imageButton5.Location = new System.Drawing.Point(34, 172);
             this.imageButton5.Name = "imageButton5";
             this.imageButton5.NormalImage = global::ExhibitionApp.Properties.Resources.settingNormal;
@@ -154,8 +154,8 @@
             // 
             this.imageButton4.BackColor = System.Drawing.Color.Transparent;
             this.imageButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton4.DownImage = null;
-            this.imageButton4.HoverImage = global::ExhibitionApp.Properties.Resources.exitDown;
+            this.imageButton4.DownImage = global::ExhibitionApp.Properties.Resources.exitDown;
+            this.imageButton4.HoverImage = null;
             this.imageButton4.Location = new System.Drawing.Point(179, 172);
             this.imageButton4.Name = "imageButton4";
             this.imageButton4.NormalImage = global::ExhibitionApp.Properties.Resources.exitNormal;
@@ -169,8 +169,8 @@
             // 
             this.imageButton3.BackColor = System.Drawing.Color.Transparent;
             this.imageButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton3.DownImage = null;
-            this.imageButton3.HoverImage = global::ExhibitionApp.Properties.Resources.videoDown;
+            this.imageButton3.DownImage = global::ExhibitionApp.Properties.Resources.videoDown;
+            this.imageButton3.HoverImage = null;
             this.imageButton3.Location = new System.Drawing.Point(326, 24);
             this.imageButton3.Name = "imageButton3";
             this.imageButton3.NormalImage = global::ExhibitionApp.Properties.Resources.videoNormal;
@@ -184,8 +184,8 @@
             // 
             this.imageButton2.BackColor = System.Drawing.Color.Transparent;
             this.imageButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton2.DownImage = null;
-            this.imageButton2.HoverImage = global::ExhibitionApp.Properties.Resources.webDown;
+            this.imageButton2.DownImage = global::ExhibitionApp.Properties.Resources.webDown;
+            this.imageButton2.HoverImage = null;
             this.imageButton2.Location = new System.Drawing.Point(179, 24);
             this.imageButton2.Name = "imageButton2";
             this.imageButton2.NormalImage = global::ExhibitionApp.Properties.Resources.webNormal;
@@ -199,8 +199,8 @@
             // 
             this.imageButton1.BackColor = System.Drawing.Color.Transparent;
             this.imageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton1.DownImage = null;
-            this.imageButton1.HoverImage = global::ExhibitionApp.Properties.Resources.picDown;
+            this.imageButton1.DownImage = global::ExhibitionApp.Properties.Resources.picDown;
+            this.imageButton1.HoverImage = null;
             this.imageButton1.Location = new System.Drawing.Point(34, 24);
             this.imageButton1.Name = "imageButton1";
             this.imageButton1.NormalImage = global::ExhibitionApp.Properties.Resources.picNormal;
