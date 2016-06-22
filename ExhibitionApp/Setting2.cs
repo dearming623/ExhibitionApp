@@ -55,6 +55,8 @@ namespace ExhibitionApp
                 cb_start_run.SelectedIndex = MyAppSetting.GetInstance().GetStartRun();
             }
 
+            cb_auto_run.Checked = AutoStartup.Check();
+
         }
 
         private void btn_change_pwd_Click(object sender, EventArgs e)
@@ -234,6 +236,20 @@ namespace ExhibitionApp
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+   
+        private bool Checked = false;
+        private void cb_auto_run_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            if (!AutoStartup.Set(cb_auto_run.Checked))
+            {
+                cb_auto_run.Checked = false;
+
+                MessageBox.Show("修改自启动失败。");
+            }
+            
         }
     }
 }

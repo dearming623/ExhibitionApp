@@ -43,6 +43,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_add_record = new System.Windows.Forms.Button();
             this.btn_change_pwd = new System.Windows.Forms.Button();
@@ -59,9 +62,7 @@
             this.pb_popup_softkeyboard = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cb_auto_run = new System.Windows.Forms.CheckBox();
             this.btn_close = new System.Windows.Forms.ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
@@ -268,6 +269,32 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "按钮名称";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.name.Width = 130;
+            // 
+            // link
+            // 
+            this.link.DataPropertyName = "link";
+            this.link.HeaderText = "对应触发连接";
+            this.link.Name = "link";
+            this.link.ReadOnly = true;
+            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.link.Width = 440;
+            // 
+            // del
+            // 
+            this.del.HeaderText = "操作";
+            this.del.Name = "del";
+            this.del.Text = "删除";
+            this.del.UseColumnTextForButtonValue = true;
+            this.del.Width = 60;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -441,37 +468,25 @@
             this.label15.Text = "设置";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // name
+            // cb_auto_run
             // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "按钮名称";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.name.Width = 130;
-            // 
-            // link
-            // 
-            this.link.DataPropertyName = "link";
-            this.link.HeaderText = "对应触发连接";
-            this.link.Name = "link";
-            this.link.ReadOnly = true;
-            this.link.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.link.Width = 440;
-            // 
-            // del
-            // 
-            this.del.HeaderText = "操作";
-            this.del.Name = "del";
-            this.del.Text = "删除";
-            this.del.UseColumnTextForButtonValue = true;
-            this.del.Width = 60;
+            this.cb_auto_run.AutoSize = true;
+            this.cb_auto_run.BackColor = System.Drawing.Color.Transparent;
+            this.cb_auto_run.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cb_auto_run.ForeColor = System.Drawing.Color.White;
+            this.cb_auto_run.Location = new System.Drawing.Point(583, 164);
+            this.cb_auto_run.Name = "cb_auto_run";
+            this.cb_auto_run.Size = new System.Drawing.Size(236, 25);
+            this.cb_auto_run.TabIndex = 31;
+            this.cb_auto_run.Text = "开机自动启动此程序";
+            this.cb_auto_run.UseVisualStyleBackColor = false;
+            this.cb_auto_run.CheckedChanged += new System.EventHandler(this.cb_auto_run_CheckedChanged);
             // 
             // btn_close
             // 
             this.btn_close.BackColor = System.Drawing.Color.Transparent;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_close.DownImage = null;
+            this.btn_close.DownImage = global::ExhibitionApp.Properties.Resources.btn_blue_closeDown;
             this.btn_close.HoverImage = global::ExhibitionApp.Properties.Resources.btn_blue_closeDown;
             this.btn_close.Location = new System.Drawing.Point(798, 4);
             this.btn_close.Name = "btn_close";
@@ -491,6 +506,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(857, 899);
             this.ControlBox = false;
+            this.Controls.Add(this.cb_auto_run);
             this.Controls.Add(this.btn_add_record);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label15);
@@ -576,5 +592,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn link;
         private System.Windows.Forms.DataGridViewButtonColumn del;
+        private System.Windows.Forms.CheckBox cb_auto_run;
     }
 }

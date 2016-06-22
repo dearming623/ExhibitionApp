@@ -63,7 +63,7 @@
             this.btn_play_video.BackColor = System.Drawing.Color.Transparent;
             this.btn_play_video.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_play_video.DownImage = global::ExhibitionApp.Properties.Resources.playDown;
-            this.btn_play_video.HoverImage = null;
+            this.btn_play_video.HoverImage = global::ExhibitionApp.Properties.Resources.playDown;
             this.btn_play_video.Location = new System.Drawing.Point(347, 295);
             this.btn_play_video.Name = "btn_play_video";
             this.btn_play_video.NormalImage = global::ExhibitionApp.Properties.Resources.playNormal;
@@ -116,8 +116,8 @@
             // 
             this.imageButton1.BackColor = System.Drawing.Color.Transparent;
             this.imageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.imageButton1.DownImage = null;
             this.imageButton1.DownImage = global::ExhibitionApp.Properties.Resources.menuDown;
+            this.imageButton1.HoverImage = global::ExhibitionApp.Properties.Resources.menuDown;
             this.imageButton1.Location = new System.Drawing.Point(259, 13);
             this.imageButton1.Name = "imageButton1";
             this.imageButton1.NormalImage = global::ExhibitionApp.Properties.Resources.menuNormal;

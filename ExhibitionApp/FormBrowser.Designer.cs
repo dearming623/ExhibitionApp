@@ -69,8 +69,8 @@
             this.btn_go_forward.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_go_forward.BackColor = System.Drawing.Color.Transparent;
             this.btn_go_forward.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_go_forward.DownImage = null;
             this.btn_go_forward.DownImage = global::ExhibitionApp.Properties.Resources.arrowforwardDown;
+            this.btn_go_forward.HoverImage = global::ExhibitionApp.Properties.Resources.arrowforwardDown;
             this.btn_go_forward.Location = new System.Drawing.Point(792, 8);
             this.btn_go_forward.Name = "btn_go_forward";
             this.btn_go_forward.NormalImage = global::ExhibitionApp.Properties.Resources.arrowforwardNormal;
@@ -85,8 +85,8 @@
             this.btn_go_back.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_go_back.BackColor = System.Drawing.Color.Transparent;
             this.btn_go_back.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_go_back.DownImage = null;
             this.btn_go_back.DownImage = global::ExhibitionApp.Properties.Resources.arrowbackDown;
+            this.btn_go_back.HoverImage = global::ExhibitionApp.Properties.Resources.arrowbackDown;
             this.btn_go_back.Location = new System.Drawing.Point(746, 8);
             this.btn_go_back.Name = "btn_go_back";
             this.btn_go_back.NormalImage = global::ExhibitionApp.Properties.Resources.arrowbackNormal;
@@ -101,8 +101,8 @@
             this.btn_menu.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_menu.BackColor = System.Drawing.Color.Transparent;
             this.btn_menu.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_menu.DownImage = null;
             this.btn_menu.DownImage = global::ExhibitionApp.Properties.Resources.menuDown;
+            this.btn_menu.HoverImage = global::ExhibitionApp.Properties.Resources.menuDown;
             this.btn_menu.Location = new System.Drawing.Point(849, 11);
             this.btn_menu.Name = "btn_menu";
             this.btn_menu.NormalImage = global::ExhibitionApp.Properties.Resources.menuNormal;

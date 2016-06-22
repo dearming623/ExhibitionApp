@@ -76,7 +76,7 @@
             this.btn_confirm.BackColor = System.Drawing.Color.Transparent;
             this.btn_confirm.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_confirm.DownImage = global::ExhibitionApp.Properties.Resources.okDown;
-            this.btn_confirm.HoverImage = null;
+            this.btn_confirm.HoverImage = global::ExhibitionApp.Properties.Resources.okDown;
             this.btn_confirm.Location = new System.Drawing.Point(60, 131);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.NormalImage = global::ExhibitionApp.Properties.Resources.okNormal;
@@ -92,7 +92,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ExhibitionApp.Properties.Resources.menu_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(548, 206);
+            this.ClientSize = new System.Drawing.Size(543, 206);
             this.ControlBox = false;
             this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.pb_popup_softkeyboard);
