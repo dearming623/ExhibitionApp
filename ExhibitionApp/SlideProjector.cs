@@ -248,6 +248,21 @@ class SlideProjector
         return "";
     }
 
+    int current_idx = 0;
+    public object getNextObject(ArrayList lst)
+    {
+        if (lst != null && lst.Count > 0)
+        {
+            if (current_idx >= lst.Count)
+                current_idx = 0;
+
+            return lst[current_idx++];
+        }
+
+        return "";
+    }
+
+
     public object RandomOneObject(ArrayList lst)
     {
         if (lst != null && lst.Count > 0)
@@ -271,7 +286,7 @@ class SlideProjector
         {
             // string img_path = randomImagePath();
 
-            string img_path = Convert.ToString(  RandomOneObject(images));
+            string img_path = Convert.ToString(getNextObject(images));
 
             Random ran = new Random();
 

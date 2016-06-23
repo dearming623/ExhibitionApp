@@ -11,7 +11,12 @@ namespace ExhibitionApp
 {
     public partial class ConfirmPwd2 : Form
     {
-       
+        public const int CAN_DISPOSE_APP = 0;
+        public const int CAN_OPEN_CONFIG = 1;
+
+        private int _action = CAN_DISPOSE_APP;
+
+        private Setting2 _Setting = null;
 
         public ConfirmPwd2()
         {
@@ -40,7 +45,20 @@ namespace ExhibitionApp
                 return;
             }
 
-            SystemController.onExitApplication();
+
+            switch (_action)
+            {
+                case CAN_DISPOSE_APP:
+                    SystemController.onExitApplication();
+                    break;
+                case CAN_OPEN_CONFIG:
+                    OpenSetttingForm();
+                    break;
+
+                default:
+                    break;
+            }
+
 
             //if (onConfirmPwdEvent != null)
             //{
@@ -48,8 +66,29 @@ namespace ExhibitionApp
             //}
 
         }
+        private void OpenSetttingForm()
+        {
 
-      
+            if (_Setting != null)
+            {
+                _Setting.Activate();
+            }
+            else
+            {
+                _Setting = new Setting2();
+                _Setting.FormClosed += Form_Setting_Closed;
+                _Setting.Show();
+            }
+
+            this.Close();
+        }
+
+        private void Form_Setting_Closed(object sender, FormClosedEventArgs e)
+        {
+            _Setting = null;
+        }
+
+
         private bool IsCurrentPwd(string pwd)
         {
             return MyAppSetting.GetInstance().GetPassWordOfLogout() == pwd;
@@ -68,7 +107,14 @@ namespace ExhibitionApp
             }
 
             tb_pwd.Focus();
-            
+
+        }
+
+
+
+        public void setAcitionAfterConfirm(int type)
+        {
+            _action = type;
         }
     }
 }

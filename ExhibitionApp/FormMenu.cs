@@ -26,7 +26,7 @@ namespace ExhibitionApp
 
 
         private ConfirmPwd2 _ConfirmPwd = null;
-        private Setting2 _Setting = null;
+        //private Setting2 _Setting = null;
         private FormBrowser _FormBrowser = null;
         private FormPlayPicture _FormPlayPicture = null;
         private FormPlayVideo _FormPlayVideo = null;
@@ -44,6 +44,28 @@ namespace ExhibitionApp
         private void btn_exit_system_Click(object sender, EventArgs e)
         {
 
+            //if (_ConfirmPwd != null)
+            //{
+            //    _ConfirmPwd.Activate();
+            //}
+            //else
+            //{
+            //    _ConfirmPwd = new ConfirmPwd2();
+
+            //    _ConfirmPwd.FormClosed += FormConfirmPwd_Closed;
+            //    //_ConfirmPwd.onConfirmPwdEvent += _ConfirmPwd_onConfirmPwdEvent;
+
+            //    _ConfirmPwd.Show();
+            //}
+
+            openConfirmPwd(ConfirmPwd2.CAN_DISPOSE_APP);
+          
+            this.Close();
+        }
+
+        private void openConfirmPwd(int type)
+        {
+
             if (_ConfirmPwd != null)
             {
                 _ConfirmPwd.Activate();
@@ -51,14 +73,14 @@ namespace ExhibitionApp
             else
             {
                 _ConfirmPwd = new ConfirmPwd2();
-               
+
                 _ConfirmPwd.FormClosed += FormConfirmPwd_Closed;
                 //_ConfirmPwd.onConfirmPwdEvent += _ConfirmPwd_onConfirmPwdEvent;
 
                 _ConfirmPwd.Show();
             }
 
-            this.Close();
+            _ConfirmPwd.setAcitionAfterConfirm(type);
         }
 
         private void _ConfirmPwd_onConfirmPwdEvent(object sender, EventArgs e)
@@ -73,24 +95,26 @@ namespace ExhibitionApp
 
         private void btn_setting_Click(object sender, EventArgs e)
         {
-            if (_Setting != null)
-            {
-                _Setting.Activate();
-            }
-            else
-            {
-                _Setting = new Setting2();
-                _Setting.FormClosed += Form_Setting_Closed;
-                _Setting.Show();
-            }
+            openConfirmPwd(ConfirmPwd2.CAN_OPEN_CONFIG);
+
+            //if (_Setting != null)
+            //{
+            //    _Setting.Activate();
+            //}
+            //else
+            //{
+            //    _Setting = new Setting2();
+            //    _Setting.FormClosed += Form_Setting_Closed;
+            //    _Setting.Show();
+            //}
 
             this.Close();
         }
 
-        private void Form_Setting_Closed(object sender, FormClosedEventArgs e)
-        {
-            _Setting = null;
-        }
+        //private void Form_Setting_Closed(object sender, FormClosedEventArgs e)
+        //{
+        //    _Setting = null;
+        //}
 
         private void btn_play_video_Click(object sender, EventArgs e)
         {

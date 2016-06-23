@@ -55,6 +55,9 @@ namespace ExhibitionApp
                 {
                     string[] dirs = Directory.GetFiles(path, ImageType[i]);
                     // string[] dirs = Directory.GetFiles(@"d:\\My Documents\\My Pictures", "*.jpg");
+
+                    //Array.Sort(dirs, new MyDateSorter());
+
                     int j = 0;
                     foreach (string dir in dirs)
                     {
@@ -67,6 +70,8 @@ namespace ExhibitionApp
 
                     }
                 }
+
+               
 
 
                 //IComparer myComparer = new myReverserClass();
@@ -142,6 +147,38 @@ namespace ExhibitionApp
         //    }
 
         //}
+
+        public class MyDateSorter : IComparer
+        {
+            #region IComparer Members     
+            public int Compare(object x, object y)
+            {
+                if (x == null && y == null)
+                {
+                    return 0;
+                }
+                if (x == null)
+                {
+                    return -1;
+                }
+                if (y == null)
+                {
+                    return 1;
+                }
+                string xInfo = (string)x;
+                string yInfo = (string)y;
+
+
+                //依名稱排序     
+                return xInfo.CompareTo(yInfo);//遞增     
+                 //return yInfo.FullName.CompareTo(xInfo.FullName);//遞減     
+
+                //依修改日期排序     
+                //return xInfo.LastWriteTime.CompareTo(yInfo.LastWriteTime);//遞增     
+                //return yInfo.LastWriteTime.CompareTo(xInfo.LastWriteTime);//遞減     
+            }
+            #endregion
+        }
 
     }
 }
