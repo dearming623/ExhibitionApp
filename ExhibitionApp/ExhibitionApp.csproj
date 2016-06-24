@@ -88,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoStartup.cs" />
+    <Compile Include="FormLoopPlayVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoopPlayVideo.Designer.cs">
+      <DependentUpon>FormLoopPlayVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="SlideProjector.cs" />
     <Compile Include="AnimatorImage.cs" />
     <Compile Include="ChangePwd2.cs">
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePwd.resx">
       <DependentUpon>ChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoopPlayVideo.resx">
+      <DependentUpon>FormLoopPlayVideo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVideoSelection.resx">
       <DependentUpon>FormVideoSelection.cs</DependentUpon>
@@ -445,6 +454,12 @@
     <None Include="Resources\Navigation_Button11.png" />
     <None Include="Resources\Navigation_Button2.png" />
     <None Include="Resources\Navigation_Button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Winforms.Components\Winforms.Components.csproj">
+      <Project>{c93cd6b7-7890-48d9-98aa-9f447f519654}</Project>
+      <Name>Winforms.Components</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

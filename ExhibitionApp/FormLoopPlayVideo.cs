@@ -19,22 +19,7 @@ namespace ExhibitionApp
             axWindowsMediaPlayer1.uiMode = "None";
         }
 
-        public FormLoopPlayVideo(string videoFileName)
-        {
-
-            InitializeComponent();
-
-            axWindowsMediaPlayer1.uiMode = "None";
-
-            axWindowsMediaPlayer1.enableContextMenu = false;
-            axWindowsMediaPlayer1.ClickEvent += AxWindowsMediaPlayer1_ClickEvent;
-            axWindowsMediaPlayer1.DoubleClickEvent += AxWindowsMediaPlayer1_DoubleClickEvent;
-            axWindowsMediaPlayer1.PlayStateChange += AxWindowsMediaPlayer1_PlayStateChange;
-
-            this.axWindowsMediaPlayer1.currentPlaylist.clear();
-            this.axWindowsMediaPlayer1.currentPlaylist.appendItem(this.axWindowsMediaPlayer1.newMedia(videoFileName));
-             
-        }
+      
 
 
         public delegate void onScreenClickEventHandler(object sender, EventArgs e);
@@ -44,6 +29,7 @@ namespace ExhibitionApp
 
         private void Form_Load(object sender, EventArgs e)
         {
+          
             string path = "";
             if (String.IsNullOrEmpty(path))
             {
@@ -83,10 +69,7 @@ namespace ExhibitionApp
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            onScreenClick();
-        }
+        
 
         private void LoadVideoAndPlay()
         {
@@ -121,30 +104,10 @@ namespace ExhibitionApp
                 MessageBox.Show("没有任何可以播放的视频，请检查视频源是否准备好。");
             }
             
-           
-
-
-
-            
 
         }
 
-        public void play(string file )
-        {
-            axWindowsMediaPlayer1.uiMode = "None";
-            //axWindowsMediaPlayer1.URL = "E:\\demo.avi";
-
-            axWindowsMediaPlayer1.enableContextMenu = false;
-            axWindowsMediaPlayer1.ClickEvent += AxWindowsMediaPlayer1_ClickEvent;
-            axWindowsMediaPlayer1.DoubleClickEvent += AxWindowsMediaPlayer1_DoubleClickEvent;
-            axWindowsMediaPlayer1.PlayStateChange += AxWindowsMediaPlayer1_PlayStateChange;
-
-            this.axWindowsMediaPlayer1.currentPlaylist.clear();
-            this.axWindowsMediaPlayer1.currentPlaylist.appendItem(this.axWindowsMediaPlayer1.newMedia(file));
-            axWindowsMediaPlayer1.Ctlcontrols.play();
-
-
-        }
+   
 
         private void AxWindowsMediaPlayer1_ClickEvent(object sender, AxWMPLib._WMPOCXEvents_ClickEvent e)
         {
@@ -199,7 +162,7 @@ namespace ExhibitionApp
                    // currentStateLabel.Text = "MediaEnded";
 
                     //axWindowsMediaPlayer1.Ctlcontrols.stop();
-                    this.Close();
+                    //this.Close();
 
                     break;
 
@@ -243,9 +206,6 @@ namespace ExhibitionApp
             this.Close();
         }
 
-        private void panel1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("panel_click");
-        }
+       
     }
 }

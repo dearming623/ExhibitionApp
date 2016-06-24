@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using Winforms.Components.ApplicationIdleData;
 
 namespace ExhibitionApp
 {
@@ -41,7 +42,20 @@ namespace ExhibitionApp
             //pnlThumb.Controls.Add(pb_play);
             //pb_play.BringToFront();
 
-          
+
+            applicationIdle.Started += new EventHandler(applicationIdle_Started);
+            applicationIdle.TickAsync += new EventHandler<TickEventArgs>(applicationIdle_TickAsync);
+            applicationIdle.Stopped += new EventHandler(applicationIdle_Stopped);
+            applicationIdle.Activity += new EventHandler<ActivityEventArgs>(applicationIdle_Activity);
+            applicationIdle.WarnAsync += new EventHandler(applicationIdle_WarnAsync);
+            applicationIdle.IdleAsync += new EventHandler(applicationIdle_IdleAsync);
+
+            if (!applicationIdle.IsRunning)
+            {
+                applicationIdle.Start();
+            }
+
+
         }
 
         private void Pb_play_Click(object sender, EventArgs e)
@@ -300,6 +314,96 @@ namespace ExhibitionApp
             picImageSlide.Image = Image.FromFile(CurrentItem.ImageFullName);
 
            // MessageBox.Show("video full name:" + CurrentItem.VideoFullName);
+        }
+
+
+        private FormLoopPlayVideo loopPlayVideo = null;
+        private void OpenLoopPlayVideo()
+        {
+            if (loopPlayVideo != null)
+            {
+
+                loopPlayVideo.Activate();
+               // loopPlayVideo.Close();
+            }
+            else
+            {
+                loopPlayVideo = new FormLoopPlayVideo();
+                loopPlayVideo.FormClosed += LoopPlayVideo_FormClosed;
+                loopPlayVideo.Show();
+            }
+        }
+
+        private void LoopPlayVideo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            loopPlayVideo = null;
+
+            if (!applicationIdle.IsRunning)
+            {
+                applicationIdle.Start();
+            }
+           
+        }
+
+
+        void applicationIdle_Started(object sender, EventArgs e)
+        {
+           
+        }
+
+        void applicationIdle_TickAsync(object sender, TickEventArgs e)
+        {
+            BeginInvoke(new MethodInvoker(
+                delegate () { applicationIdle_Tick(sender, e); })
+                );
+        }
+
+        void applicationIdle_Tick(object sender, TickEventArgs e)
+        {
+          
+        }
+
+        void applicationIdle_Stopped(object sender, EventArgs e)
+        {
+           
+        }
+
+        void applicationIdle_Activity(object sender, ActivityEventArgs e)
+        {
+           
+        }
+
+        void applicationIdle_WarnAsync(object sender, EventArgs e)
+        {
+            Console.Beep();
+        }
+
+        void applicationIdle_IdleAsync(object sender, EventArgs e)
+        {
+            BeginInvoke(new MethodInvoker(
+                delegate () { applicationIdle_Idle(sender, e); })
+                );
+        }
+
+        void applicationIdle_Idle(object sender, EventArgs e)
+        {
+            
+            //MessageBox.Show(
+            //    this,
+            //    "You have been automatically logged out.",
+            //    "Application Idle",
+            //    MessageBoxButtons.OK,
+            //    MessageBoxIcon.Information);
+
+            OpenLoopPlayVideo();
+        }
+
+        private void FormVideoSelection_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (applicationIdle.IsRunning)
+            {
+                applicationIdle.Stop();
+            }
         }
     }
 }
