@@ -233,6 +233,16 @@ namespace ExhibitionApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_bg {
+            get {
+                object obj = ResourceManager.GetObject("logo_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_102px {
             get {
                 object obj = ResourceManager.GetObject("menu_102px", resourceCulture);
@@ -396,16 +406,6 @@ namespace ExhibitionApp.Properties {
         internal static System.Drawing.Bitmap okNormal {
             get {
                 object obj = ResourceManager.GetObject("okNormal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pic_bg {
-            get {
-                object obj = ResourceManager.GetObject("pic_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

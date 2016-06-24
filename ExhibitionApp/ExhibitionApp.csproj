@@ -431,6 +431,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_32px.ico" />
+    <None Include="Resources\logo_bg.jpg" />
     <None Include="Resources\arrowforwardDown.png" />
     <None Include="Resources\arrowbackNormal.png" />
     <None Include="Resources\arrowbackDown.png" />

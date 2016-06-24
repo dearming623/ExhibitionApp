@@ -519,7 +519,7 @@ class SlideProjector
 
     #region 中心闭幕（改进版）
 
-    Bitmap backgroundBmp = ExhibitionApp.Properties.Resources.pic_bg;
+    Bitmap backgroundBmp = ExhibitionApp.Properties.Resources.logo_bg;
     private int bmpWidth;
     private int bmpHeight;
 

@@ -440,7 +440,7 @@ class AnimatorImage
 
     #region 中心闭幕（改进版）
 
-    Bitmap backgroundBmp = ExhibitionApp.Properties.Resources.pic_bg;
+    Bitmap backgroundBmp = ExhibitionApp.Properties.Resources.logo_bg;
     // 原理：由大到小生成图像中心区域，然后用总区域减去该中心区域，并用材质画刷填充
     private void Animator03()
     {
