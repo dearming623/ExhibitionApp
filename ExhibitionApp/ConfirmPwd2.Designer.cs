@@ -105,6 +105,7 @@
             this.Name = "ConfirmPwd2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "密码验证";
+            this.Load += new System.EventHandler(this.ConfirmPwd2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_confirm)).EndInit();
             this.ResumeLayout(false);

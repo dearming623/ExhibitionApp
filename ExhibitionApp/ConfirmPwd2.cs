@@ -116,5 +116,10 @@ namespace ExhibitionApp
         {
             _action = type;
         }
+
+        private void ConfirmPwd2_Load(object sender, EventArgs e)
+        {
+            pb_popup_softkeyboard.Focus();
+        }
     }
 }
