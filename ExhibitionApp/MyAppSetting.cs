@@ -13,7 +13,10 @@ namespace ExhibitionApp
 
         public DateTime ShutDownTime;
 
+        public DateTime ShutDownTimeAM;
+
         public static string TIME_OF_SHUTDOWN = "TimeOfShutdown";
+        public static string TIME_OF_SHUTDOWN_AM = "TimeOfShutdown_AM";
         public static string PATH_OF_SLIDE = "PathOfSlide";
         public static string PATH_OF_VIDEO = "PahtOfVideo";
         public static string PWD_OF_LOGOUT = "PasswordOfLogout";
@@ -42,6 +45,14 @@ namespace ExhibitionApp
                 DateTime mid1 = DateTime.Now;
                 mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, Convert.ToInt32(arr[0]), Convert.ToInt32(arr[1]), 0, 0);
                 ShutDownTime = mid1;
+            }
+
+            arr = GetTimeOfShutDownAM().Split(':');
+            if (arr != null && arr.Length == 2)
+            {
+                DateTime mid1 = DateTime.Now;
+                mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, Convert.ToInt32(arr[0]), Convert.ToInt32(arr[1]), 0, 0);
+                ShutDownTimeAM = mid1;
             }
         }
 
@@ -85,6 +96,17 @@ namespace ExhibitionApp
             return config[key];
         }
 
+        public void SaveShutDownTimeAM(int hour,int min)
+        {
+            DateTime mid1 = DateTime.Now;
+            mid1 = new DateTime(mid1.Year, mid1.Month, mid1.Day, hour, min, 0, 0);
+            ShutDownTimeAM = mid1;
+
+            string t = Convert.ToString(hour) + ":" + Convert.ToString(min);
+
+            update(TIME_OF_SHUTDOWN_AM, t);
+        }
+
         public void SaveShutDownTime(int hour,int min)
         {
             DateTime mid1 = DateTime.Now;
@@ -126,6 +148,17 @@ namespace ExhibitionApp
         public string GetTimeOfShutDown()
         {
             return config[TIME_OF_SHUTDOWN];
+        }
+
+        public string GetTimeOfShutDownAM()
+        {
+            if (!config.ContainsKey(TIME_OF_SHUTDOWN_AM))
+            {
+                SaveShutDownTimeAM(11, 30);
+            }
+
+            return config[TIME_OF_SHUTDOWN_AM];
+
         }
 
         public int DeleteLink(string name)

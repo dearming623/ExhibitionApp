@@ -255,8 +255,10 @@ namespace ExhibitionApp
         {
             Console.WriteLine("DateTime.Now.Hour ==" + DateTime.Now.Hour + " DateTime.Now.Minute = " + DateTime.Now.Minute + " DateTime.Now.second ==" + DateTime.Now.Second);
 
-            if (DateTime.Now.Hour == MyAppSetting.GetInstance().ShutDownTime.Hour &&
-                DateTime.Now.Minute == MyAppSetting.GetInstance().ShutDownTime.Minute)
+            if ((DateTime.Now.Hour == MyAppSetting.GetInstance().ShutDownTime.Hour &&
+                DateTime.Now.Minute == MyAppSetting.GetInstance().ShutDownTime.Minute) ||
+                (DateTime.Now.Hour == MyAppSetting.GetInstance().ShutDownTimeAM.Hour &&
+                DateTime.Now.Minute == MyAppSetting.GetInstance().ShutDownTimeAM.Minute))
             {
 
                 timer1.Enabled = false;

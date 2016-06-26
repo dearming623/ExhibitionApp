@@ -64,11 +64,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.cb_auto_run = new System.Windows.Forms.CheckBox();
             this.btn_close = new System.Windows.Forms.ImageButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.numericUpDownMinAM = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericUpDownHourAM = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHourAM)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +84,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(132, 69);
+            this.label1.Location = new System.Drawing.Point(132, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 0;
@@ -160,15 +167,15 @@
             // 
             // numericUpDownHour
             // 
-            this.numericUpDownHour.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownHour.Location = new System.Drawing.Point(264, 63);
+            this.numericUpDownHour.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownHour.Location = new System.Drawing.Point(492, 65);
             this.numericUpDownHour.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.numericUpDownHour.Name = "numericUpDownHour";
-            this.numericUpDownHour.Size = new System.Drawing.Size(65, 38);
+            this.numericUpDownHour.Size = new System.Drawing.Size(50, 31);
             this.numericUpDownHour.TabIndex = 8;
             this.numericUpDownHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownHour.Value = new decimal(new int[] {
@@ -184,7 +191,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(329, 69);
+            this.label5.Location = new System.Drawing.Point(542, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 24);
             this.label5.TabIndex = 9;
@@ -196,7 +203,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(439, 69);
+            this.label6.Location = new System.Drawing.Point(627, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 24);
             this.label6.TabIndex = 11;
@@ -204,15 +211,15 @@
             // 
             // numericUpDownMin
             // 
-            this.numericUpDownMin.Font = new System.Drawing.Font("SimHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownMin.Location = new System.Drawing.Point(375, 63);
+            this.numericUpDownMin.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownMin.Location = new System.Drawing.Point(576, 65);
             this.numericUpDownMin.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.numericUpDownMin.Name = "numericUpDownMin";
-            this.numericUpDownMin.Size = new System.Drawing.Size(65, 38);
+            this.numericUpDownMin.Size = new System.Drawing.Size(50, 31);
             this.numericUpDownMin.TabIndex = 10;
             this.numericUpDownMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownMin.Value = new decimal(new int[] {
@@ -228,11 +235,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(479, 69);
+            this.label7.Location = new System.Drawing.Point(653, 68);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 24);
+            this.label7.Size = new System.Drawing.Size(106, 24);
             this.label7.TabIndex = 12;
-            this.label7.Text = "关机";
+            this.label7.Text = "进行关机";
             // 
             // label8
             // 
@@ -240,7 +247,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 69);
+            this.label8.Location = new System.Drawing.Point(12, 68);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 24);
             this.label8.TabIndex = 13;
@@ -474,7 +481,7 @@
             this.cb_auto_run.BackColor = System.Drawing.Color.Transparent;
             this.cb_auto_run.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cb_auto_run.ForeColor = System.Drawing.Color.White;
-            this.cb_auto_run.Location = new System.Drawing.Point(583, 164);
+            this.cb_auto_run.Location = new System.Drawing.Point(583, 853);
             this.cb_auto_run.Name = "cb_auto_run";
             this.cb_auto_run.Size = new System.Drawing.Size(236, 25);
             this.cb_auto_run.TabIndex = 31;
@@ -497,6 +504,82 @@
             this.btn_close.TabStop = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(401, 68);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(34, 24);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "分";
+            // 
+            // numericUpDownMinAM
+            // 
+            this.numericUpDownMinAM.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownMinAM.Location = new System.Drawing.Point(347, 65);
+            this.numericUpDownMinAM.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.numericUpDownMinAM.Name = "numericUpDownMinAM";
+            this.numericUpDownMinAM.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDownMinAM.TabIndex = 34;
+            this.numericUpDownMinAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownMinAM.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDownMinAM.ValueChanged += new System.EventHandler(this.numericUpDownAM_ValueChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(315, 68);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(34, 24);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "时";
+            // 
+            // numericUpDownHourAM
+            // 
+            this.numericUpDownHourAM.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownHourAM.Location = new System.Drawing.Point(263, 65);
+            this.numericUpDownHourAM.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numericUpDownHourAM.Name = "numericUpDownHourAM";
+            this.numericUpDownHourAM.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDownHourAM.TabIndex = 32;
+            this.numericUpDownHourAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownHourAM.Value = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            this.numericUpDownHourAM.ValueChanged += new System.EventHandler(this.numericUpDownAM_ValueChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(430, 68);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 24);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "或者";
+            // 
             // Setting2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -507,6 +590,11 @@
             this.ClientSize = new System.Drawing.Size(857, 899);
             this.ControlBox = false;
             this.Controls.Add(this.cb_auto_run);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.numericUpDownMinAM);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.numericUpDownHourAM);
             this.Controls.Add(this.btn_add_record);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label15);
@@ -550,6 +638,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_popup_softkeyboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHourAM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,5 +683,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn link;
         private System.Windows.Forms.DataGridViewButtonColumn del;
         private System.Windows.Forms.CheckBox cb_auto_run;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown numericUpDownMinAM;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown numericUpDownHourAM;
+        private System.Windows.Forms.Label label18;
     }
 }
