@@ -167,15 +167,15 @@
             // 
             // numericUpDownHour
             // 
-            this.numericUpDownHour.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownHour.Location = new System.Drawing.Point(492, 65);
+            this.numericUpDownHour.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownHour.Location = new System.Drawing.Point(492, 63);
             this.numericUpDownHour.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.numericUpDownHour.Name = "numericUpDownHour";
-            this.numericUpDownHour.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDownHour.Size = new System.Drawing.Size(50, 35);
             this.numericUpDownHour.TabIndex = 8;
             this.numericUpDownHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownHour.Value = new decimal(new int[] {
@@ -183,7 +183,6 @@
             0,
             0,
             0});
-            this.numericUpDownHour.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label5
             // 
@@ -211,15 +210,15 @@
             // 
             // numericUpDownMin
             // 
-            this.numericUpDownMin.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownMin.Location = new System.Drawing.Point(576, 65);
+            this.numericUpDownMin.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownMin.Location = new System.Drawing.Point(576, 63);
             this.numericUpDownMin.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.numericUpDownMin.Name = "numericUpDownMin";
-            this.numericUpDownMin.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDownMin.Size = new System.Drawing.Size(50, 35);
             this.numericUpDownMin.TabIndex = 10;
             this.numericUpDownMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownMin.Value = new decimal(new int[] {
@@ -227,7 +226,6 @@
             0,
             0,
             0});
-            this.numericUpDownMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label7
             // 
@@ -518,15 +516,15 @@
             // 
             // numericUpDownMinAM
             // 
-            this.numericUpDownMinAM.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownMinAM.Location = new System.Drawing.Point(347, 65);
+            this.numericUpDownMinAM.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownMinAM.Location = new System.Drawing.Point(347, 63);
             this.numericUpDownMinAM.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.numericUpDownMinAM.Name = "numericUpDownMinAM";
-            this.numericUpDownMinAM.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDownMinAM.Size = new System.Drawing.Size(50, 35);
             this.numericUpDownMinAM.TabIndex = 34;
             this.numericUpDownMinAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownMinAM.Value = new decimal(new int[] {
@@ -534,7 +532,6 @@
             0,
             0,
             0});
-            this.numericUpDownMinAM.ValueChanged += new System.EventHandler(this.numericUpDownAM_ValueChanged);
             // 
             // label17
             // 
@@ -550,15 +547,15 @@
             // 
             // numericUpDownHourAM
             // 
-            this.numericUpDownHourAM.Font = new System.Drawing.Font("SimHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownHourAM.Location = new System.Drawing.Point(263, 65);
+            this.numericUpDownHourAM.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.numericUpDownHourAM.Location = new System.Drawing.Point(263, 63);
             this.numericUpDownHourAM.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.numericUpDownHourAM.Name = "numericUpDownHourAM";
-            this.numericUpDownHourAM.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDownHourAM.Size = new System.Drawing.Size(50, 35);
             this.numericUpDownHourAM.TabIndex = 32;
             this.numericUpDownHourAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownHourAM.Value = new decimal(new int[] {
@@ -566,7 +563,6 @@
             0,
             0,
             0});
-            this.numericUpDownHourAM.ValueChanged += new System.EventHandler(this.numericUpDownAM_ValueChanged);
             // 
             // label18
             // 
