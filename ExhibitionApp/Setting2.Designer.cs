@@ -168,7 +168,7 @@
             // numericUpDownHour
             // 
             this.numericUpDownHour.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownHour.Location = new System.Drawing.Point(492, 63);
+            this.numericUpDownHour.Location = new System.Drawing.Point(492, 58);
             this.numericUpDownHour.Maximum = new decimal(new int[] {
             23,
             0,
@@ -211,7 +211,7 @@
             // numericUpDownMin
             // 
             this.numericUpDownMin.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownMin.Location = new System.Drawing.Point(576, 63);
+            this.numericUpDownMin.Location = new System.Drawing.Point(576, 58);
             this.numericUpDownMin.Maximum = new decimal(new int[] {
             59,
             0,
@@ -418,7 +418,7 @@
             "图片浏览",
             "视频浏览",
             "页面浏览"});
-            this.cb_start_run.Location = new System.Drawing.Point(366, 112);
+            this.cb_start_run.Location = new System.Drawing.Point(366, 117);
             this.cb_start_run.Name = "cb_start_run";
             this.cb_start_run.Size = new System.Drawing.Size(165, 35);
             this.cb_start_run.TabIndex = 25;
@@ -430,7 +430,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(132, 119);
+            this.label14.Location = new System.Drawing.Point(132, 124);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(226, 24);
             this.label14.TabIndex = 26;
@@ -517,7 +517,7 @@
             // numericUpDownMinAM
             // 
             this.numericUpDownMinAM.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownMinAM.Location = new System.Drawing.Point(347, 63);
+            this.numericUpDownMinAM.Location = new System.Drawing.Point(347, 58);
             this.numericUpDownMinAM.Maximum = new decimal(new int[] {
             59,
             0,
@@ -548,7 +548,7 @@
             // numericUpDownHourAM
             // 
             this.numericUpDownHourAM.Font = new System.Drawing.Font("SimHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDownHourAM.Location = new System.Drawing.Point(263, 63);
+            this.numericUpDownHourAM.Location = new System.Drawing.Point(263, 58);
             this.numericUpDownHourAM.Maximum = new decimal(new int[] {
             23,
             0,
